@@ -1,0 +1,4 @@
+pyyaml
+flake8
+mypy
+markdown-it-py

@@ -1,0 +1,120 @@
+:root {
+  --FONT: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --FONT-COLOR: #f0f0f0;
+  --GREEN: #50a14f;
+  --RED: #d83933;
+  --PURPLE: #7c5295;
+  --YELLOW: #c18401;
+  --BROWN: #986801;
+  --BLUE: #4078f2;
+  --FADED-COLOR: rgba(255, 255, 255, 0.1);
+  --BACKGROUND-COLOR: #0f0f0f;
+  --X-SMALL: min(12px, 2vw);
+  --SMALL: min(16px, 2.8vw);
+  --MEDIUM: min(18px, 3vw);
+  --LARGE: min(24px, 4vw);
+  --X-LARGE: min(32px, 5vw);
+  --THIN: 300;
+  --NORMAL: 500;
+  --THICK: 600;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--FONT);
+  background: var(--BACKGROUND-COLOR);
+  color: var(--FONT-COLOR);
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 250px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  border-bottom: 1px solid var(--FADED-COLOR);
+}
+
+nav {
+  display: flex;
+  gap: 10px 50px;
+}
+
+nav a, footer a {
+  color: var(--FONT-COLOR);
+  text-decoration: none;
+  font-size: var(--SMALL);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover, footer a:hover {
+  color: var(--RED);
+}
+
+footer h1 {
+  font-weight: var(--NORMAL);
+  font-size: var(--MEDIUM);
+  margin: 40px auto 0 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  border-top: 1px solid var(--FADED-COLOR);
+}
+
+footer p {
+  opacity: 0.8;
+  margin: 5px 0;
+}
+
+footer a {
+  margin-top: 25px;
+  display: block;
+  text-decoration: none;
+  color: var(--FONT-COLOR);
+}
+
+.red {
+  color: var(--RED);
+}
+
+@media (max-width: 1024px) {
+  header {
+    display: block;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  footer .logo {
+    margin-left: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+  }
+}
