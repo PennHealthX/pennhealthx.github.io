@@ -86,11 +86,11 @@ def render_html(
                 f"<link rel='stylesheet' type='text/css' href='{stylesheet}'>"
                 for stylesheet in config.get(arg, [])
             ]
-            html_str.replace(
+            html_str = html_str.replace(
                 f"{{{{ {arg} }}}}", ("\n" + (3 * prefix)).join(stylesheets)
             )
             continue
-        html_str.replace(f"{{{{ {arg} }}}}", config[arg])
+        html_str = html_str.replace(f"{{{{ {arg} }}}}", config[arg])
 
     return html_str
 
@@ -118,7 +118,8 @@ def main() -> None:
 
     for input_fn in fns_to_render:
         html_str = render_html(input_fn, components_dir)
-        output_fn = input_fn
+        output_fn = input_fn[input_fn.index(str(src_dir) + "/"):]
+        output_fn = output_fn[(1 + len(str(src_dir))):]
         for suffix in valid_suffixes:
             if not output_fn.endswith(suffix):
                 continue
