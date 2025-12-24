@@ -11,6 +11,7 @@ import argparse
 import os
 import re
 import yaml
+from datetime import date
 from markdown_it import MarkdownIt
 from pathlib import Path
 from typing import Final, Optional, Tuple, Union
@@ -58,8 +59,60 @@ def render_html(
 
     # Body: User-Defined Content
     html_lines.append((2 * prefix) + "<main>")
-    with open(str(input_fn)) as f:
-        lines = [line.rstrip() for line in f.readlines()]
+    if str(input_fn).lower().endswith("team.yml"):
+        with open(str(input_fn)) as f:
+            team_config = yaml.safe_load(f)
+        config = {
+            "title": "PennHealthX - Our Team",
+            "stylesheets": ["public/css/team.css"]
+        }
+
+        lines = [
+            "<div class='container'>",
+            prefix + f"<h1>{date.today().year} Executive Board</h1>",
+            prefix + "<div class='team-grid'>"
+        ]
+        for person in team_config:
+            headshot, name = person["headshot"], person["name"]
+            role, bio = person["role"], person['bio']
+            socials = {k: v for kv in person["contact"] for k, v in kv.items()}
+
+            lines.append((2 * prefix) + "<div class='team-card'>")
+            lines.append(
+                (3 * prefix) + f"<img src='{headshot}' alt='{name}' "
+                "class='team-image'>"
+            )
+            lines.append((3 * prefix) + "<div class='image-overlay'>")
+            lines.append((4 * prefix) + f"<h2 class='name'>{name}</h2>")
+            lines.append((4 * prefix) + f"<p class='role'>{role}</p>")
+            lines.append((3 * prefix) + "</div>")
+            lines.append((3 * prefix) + "<div class='hover-content'>")
+            lines.append((4 * prefix) + f"<h2 class='name'>{name}</h2>")
+            lines.append((4 * prefix) + f"<p class='role'>{role}</p>")
+            lines.append((4 * prefix) + f"<p class='bio-text'>{bio}</p>")
+            lines.append((4 * prefix) + "<div class='social-buttons'>")
+            for soc_type, soc_val in socials.items():
+                icon = {
+                    "email": "envelope",
+                    "website": "chrome",
+                    "twitter": "twitter",
+                    "linkedin": "linkedin"
+                }[soc_type]
+                if soc_type == "email" and not soc_val.startswith("mailto:"):
+                    soc_val = "mailto:" + soc_val
+                lines.append(
+                    (5 * prefix) + f"<a href='{soc_val}' target='_blank' "
+                    f"class='social-btn' aria-label='{soc_type.title()}'>"
+                    f"<i class='fa fa-{icon}'></i></a>"
+                )
+            lines.append((4 * prefix) + "</div>")
+            lines.append((3 * prefix) + "</div>")
+            lines.append((2 * prefix) + "</div>")
+        lines.extend([prefix + "</div>", "</div>"])
+        html_lines.extend([(3 * prefix) + line for line in lines])
+    else:
+        with open(str(input_fn)) as f:
+            lines = [line.rstrip() for line in f.readlines()]
         assert lines.index("---") == 0
         lines = lines[1:]
         sep_idx = lines.index("---")
@@ -90,13 +143,13 @@ def render_html(
                 f"{{{{ {arg} }}}}", ("\n" + (3 * prefix)).join(stylesheets)
             )
             continue
-        html_str = html_str.replace(f"{{{{ {arg} }}}}", config[arg])
+        html_str = html_str.replace(f"{{{{ {arg} }}}}", str(config[arg]))
 
     return html_str
 
 
 def main() -> None:
-    src_dir: Final[Union[Path, str]] = "_src"
+    src_dir: Final[Union[Path, str]] = "src"
     components_dir: Final[Union[Path, str]] = "_components"
     valid_suffixes: Final[Tuple[str, ...]] = (".template.html", ".template.md")
 
@@ -108,7 +161,8 @@ def main() -> None:
         nargs="+",
         type=str,
         choices=[
-            os.path.join(src_dir, fn) for fn in os.listdir(src_dir) if any(
+            os.path.join(src_dir, fn) for fn in os.listdir(src_dir)
+            if fn == "team.yml" or any(
                 fn.endswith(suffix) for suffix in valid_suffixes
             )
         ],
@@ -120,7 +174,7 @@ def main() -> None:
         html_str = render_html(input_fn, components_dir)
         output_fn = input_fn[input_fn.index(str(src_dir) + "/"):]
         output_fn = output_fn[(1 + len(str(src_dir))):]
-        for suffix in valid_suffixes:
+        for suffix in valid_suffixes + (".yml",):
             if not output_fn.endswith(suffix):
                 continue
             output_fn = output_fn[:-len(suffix)] + ".html"

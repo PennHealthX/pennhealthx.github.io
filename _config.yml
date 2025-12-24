@@ -3,3 +3,4 @@ exclude:
   - LICENSE
   - render.py
   - requirements.txt
+  - src
