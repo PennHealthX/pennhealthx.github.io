@@ -3,7 +3,7 @@
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   font-size: var(--LARGE);
-  margin: 0 30px 90px 0;
+  margin: 0 30px 60px 0;
 }
 
 .social-media i:hover {
@@ -159,8 +159,18 @@ footer a {
 }
 
 @media (max-width: 1024px) {
-  .hero {
+  h1 {
+    font-size: var(--MEDIUM) !important;
+  }
+
+  p, li {
+    font-size: var(--SMALL) !important;
+  }
+
+  .hero, .stats, .stat-value {
     text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .hero p, .hero h1 {
@@ -178,5 +188,28 @@ footer a {
 
   .stats {
     justify-content: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .social-media i {
+    margin: 0 15px 60px 15px;
+  }
+
+  .overview {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .overview h1 {
+    font-size: var(--MEDIUM);
+    text-align: center;
+    margin-left: auto;
+  }
+
+  .overview hr {
+    margin-left: auto;
   }
 }
