@@ -3,13 +3,15 @@
   headshot: public/images/headshots/huanga.webp
   contact:
     - email: alan.huang@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/alan-h-6449a912a
   bio: MD candidate working on health consulting. Previously BCG, UC Berkeley.
-- name: Korlekuor (Kor) Akiti
+- name: Korlekuor Akiti
   role: Co-President
   headshot: public/images/headshots/akitik.webp
   contact:
     - email: korlekuor.akiti@pennmedicine.upenn.edu
-  bio: MD candidate working on innovation, health tech, and equity. Previously McKinsey, Google.
+    - linkedin: https://www.linkedin.com/in/korlekuor-akiti
+  bio: MD candidate working at the intersection of clinical medicine and healthcare innovation. Previously McKinsey, Google.
 - name: Michael Yao
   role: Co-President
   headshot: public/images/headshots/yaom.webp
@@ -18,10 +20,11 @@
     - website: https://www.michaelsyao.com
     - twitter: https://www.x.com/michael_s_yao
     - linkedin: https://www.linkedin.com/in/michael-s-yao
-  bio: MD-PhD candidate working on LLMs for precision medicine. Previously Genentech, Microsoft.
+  bio: MD/PhD candidate working on LLMs for precision medicine. Previously Genentech, Microsoft.
 - name: Vincent Guo
   role: Co-President
   headshot: public/images/headshots/guov.webp
   contact:
     - email: vincent.guo@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/vincenteguo
   bio: MD/MBA candidate working on AI systems for healthcare. Previously Wharton, Columbia.
