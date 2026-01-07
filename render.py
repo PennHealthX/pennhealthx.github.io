@@ -10,6 +10,7 @@ Licensed under the MIT License. Copyright PennHealthX 2025.
 import argparse
 import os
 import re
+import subprocess
 import yaml
 from datetime import date
 from markdown_it import MarkdownIt
@@ -111,11 +112,27 @@ def render_html(
         lines.extend([prefix + "</div>", "</div>"])
         html_lines.extend([(3 * prefix) + line for line in lines])
     else:
+        if not any(
+            str(input_fn).lower().endswith(ext)
+            for ext in [".template.md", ".template.html"]
+        ):
+            print(
+                "Error: Make sure your file is a .template.md or "
+                ".template.html file!"
+            )
+            exit()
         with open(str(input_fn)) as f:
             lines = [line.rstrip() for line in f.readlines()]
-        assert lines.index("---") == 0
-        lines = lines[1:]
-        sep_idx = lines.index("---")
+        try:
+            assert lines.index("---") == 0
+            lines = lines[1:]
+            sep_idx = lines.index("---")
+        except Exception:
+            print(
+                "Error: Make sure your file starts with a block that looks "
+                "like:\n---\ntitle: My Title Here\n---"
+            )
+            exit()
         input_config, input_data = lines[:sep_idx], lines[(sep_idx + 1):]
         config = yaml.safe_load("\n".join(input_config))
         if md is None:
@@ -170,6 +187,7 @@ def main() -> None:
     )
     fns_to_render = parser.parse_args().input_fn
 
+    output_fns = []
     for input_fn in fns_to_render:
         html_str = render_html(input_fn, components_dir)
         output_fn = input_fn[input_fn.index(str(src_dir) + "/"):]
@@ -181,6 +199,18 @@ def main() -> None:
             break
         with open(output_fn, "w") as f:
             f.write(html_str)
+        output_fns.append(output_fn)
+
+    for fn in output_fns:
+        if os.name == "nt":
+            os.startfile(fn)  # type: ignore
+        elif os.name == "posix":
+            try:
+                subprocess.run(["open", fn], check=True)
+            except FileNotFoundError:
+                subprocess.run(["xdg-open", fn], check=True)
+        else:
+            print("Unsupported operating system")
 
 
 if __name__ == "__main__":
