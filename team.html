@@ -39,7 +39,7 @@
       </div>
     </main>
     <script>
-      fetch('/src/team.yml')
+      fetch('/public/team.yml')
         .then(response => response.text())
         .then(yamlText => {
           const { year, cards } = generateTeamCards(yamlText);
