@@ -18,6 +18,7 @@
     <link rel="icon" type="image/x-icon" href="public/assets/favicon/favicon.ico">
     <link rel="manifest" href="public/assets/favicon/site.webmanifest">
     <meta name="theme-color" content="#1f1f1f;">
+    <script src="public/js/team-loader.js"></script>
   </head>
   <body>
     <header>
@@ -31,77 +32,25 @@
     </header>
     <main>
       <div class='container'>
-        <h1>2025 Executive Board</h1>
-        <div class='team-grid'>
-          <div class='team-card'>
-            <img src='public/images/headshots/huanga.webp' alt='Alan Huang' class='team-image'>
-            <div class='image-overlay'>
-              <h2 class='name'>Alan Huang</h2>
-              <p class='role'>Co-President</p>
-            </div>
-            <div class='hover-content'>
-              <h2 class='name'>Alan Huang</h2>
-              <p class='role'>Co-President</p>
-              <p class='bio-text'>MD candidate working on health consulting. Previously BCG, UC Berkeley.</p>
-              <div class='social-buttons'>
-                <a href='mailto:alan.huang@pennmedicine.upenn.edu' target='_blank' class='social-btn' aria-label='Email'><i class='fa fa-envelope'></i></a>
-                <a href='https://www.linkedin.com/in/alan-h-6449a912a' target='_blank' class='social-btn' aria-label='Linkedin'><i class='fa fa-linkedin'></i></a>
-              </div>
-            </div>
-          </div>
-          <div class='team-card'>
-            <img src='public/images/headshots/akitik.webp' alt='Korlekuor Akiti' class='team-image'>
-            <div class='image-overlay'>
-              <h2 class='name'>Korlekuor Akiti</h2>
-              <p class='role'>Co-President</p>
-            </div>
-            <div class='hover-content'>
-              <h2 class='name'>Korlekuor Akiti</h2>
-              <p class='role'>Co-President</p>
-              <p class='bio-text'>MD candidate working at the intersection of clinical medicine and healthcare innovation. Previously McKinsey, Google.</p>
-              <div class='social-buttons'>
-                <a href='mailto:korlekuor.akiti@pennmedicine.upenn.edu' target='_blank' class='social-btn' aria-label='Email'><i class='fa fa-envelope'></i></a>
-                <a href='https://www.linkedin.com/in/korlekuor-akiti' target='_blank' class='social-btn' aria-label='Linkedin'><i class='fa fa-linkedin'></i></a>
-              </div>
-            </div>
-          </div>
-          <div class='team-card'>
-            <img src='public/images/headshots/yaom.webp' alt='Michael Yao' class='team-image'>
-            <div class='image-overlay'>
-              <h2 class='name'>Michael Yao</h2>
-              <p class='role'>Co-President</p>
-            </div>
-            <div class='hover-content'>
-              <h2 class='name'>Michael Yao</h2>
-              <p class='role'>Co-President</p>
-              <p class='bio-text'>MD/PhD candidate working on LLMs for precision medicine. Previously Genentech, Microsoft.</p>
-              <div class='social-buttons'>
-                <a href='mailto:michael.yao@pennmedicine.upenn.edu' target='_blank' class='social-btn' aria-label='Email'><i class='fa fa-envelope'></i></a>
-                <a href='https://www.michaelsyao.com' target='_blank' class='social-btn' aria-label='Website'><i class='fa fa-chrome'></i></a>
-                <a href='https://www.x.com/michael_s_yao' target='_blank' class='social-btn' aria-label='Twitter'><i class='fa fa-twitter'></i></a>
-                <a href='https://www.linkedin.com/in/michael-s-yao' target='_blank' class='social-btn' aria-label='Linkedin'><i class='fa fa-linkedin'></i></a>
-              </div>
-            </div>
-          </div>
-          <div class='team-card'>
-            <img src='public/images/headshots/guov.webp' alt='Vincent Guo' class='team-image'>
-            <div class='image-overlay'>
-              <h2 class='name'>Vincent Guo</h2>
-              <p class='role'>Co-President</p>
-            </div>
-            <div class='hover-content'>
-              <h2 class='name'>Vincent Guo</h2>
-              <p class='role'>Co-President</p>
-              <p class='bio-text'>MD/MBA candidate working on AI systems for healthcare. Previously Wharton, Columbia.</p>
-              <div class='social-buttons'>
-                <a href='mailto:vincent.guo@pennmedicine.upenn.edu' target='_blank' class='social-btn' aria-label='Email'><i class='fa fa-envelope'></i></a>
-                <a href='https://www.linkedin.com/in/vincenteguo' target='_blank' class='social-btn' aria-label='Linkedin'><i class='fa fa-linkedin'></i></a>
-              </div>
-            </div>
-          </div>
+        <h1 id="team-year">Executive Board</h1>
+        <div class='team-grid' id="team-grid">
+          <!-- Team cards will be loaded here -->
         </div>
       </div>
     </main>
+    <script>
+      fetch('src/team.yml')
+        .then(response => response.text())
+        .then(yamlText => {
+          const { year, cards } = generateTeamCards(yamlText);
+          document.getElementById('team-grid').innerHTML = cards.join('\n');
+          document.getElementById('team-year').textContent = (year || new Date().getFullYear()) + ' Executive Board';
+        })
+        .catch(error => {
+          console.error('Error loading team data:', error);
+          document.getElementById('team-grid').innerHTML = '<p style="color: red;">Error loading team data.</p>';
+        });
+    </script>
     <footer>
       <div>
         <a href="/"><img class="logo" src="public/images/logo.svg" alt="PennHealthX"></a>

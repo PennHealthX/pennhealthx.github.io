@@ -82,11 +82,33 @@ This will create a rendered `my-webpage.html` file in the working directory. To 
 
 The webpage listing all of the members of the Executive Board works differently from the other pages. All you need to do is update the `src/team.yml` page with the new members. Each member must have the fields (1) `name`; (2) `role`; (3) `headshot` (the relative path to the file with their *square*-shaped headshot); (4) `contact` (must have at least the `email` field); and (5) `bio`.
 
-After updating this YAML file, you can render the team page by running
+If you are updating the teams page for a new year, edit the first line to the correct year:
+
+```yaml
+- year: 2026
+# rest of yaml file
+```
+
+### Testing Your Changes
+
+To test your website changes locally before deploying, you'll need to run a local web server.
+
+First, ensure you have [Node.js](https://nodejs.org/) installed on your computer. This will give you access to the `npx` command. You can verify Node.js is installed by running the following in your terminal:
 
 ```
-python3 render.py src/team.yml
+node --version
 ```
+
+If Node.js is not installed, download it from [nodejs.org](https://nodejs.org/).
+
+Once Node.js is installed, you can start a local web server from the repository directory:
+
+```
+npx serve -p 8000
+```
+
+This will start a local server at `http://localhost:8080`. Open this URL in your web browser to preview your website changes locally.
+
 
 ### Deploying Your Changes
 

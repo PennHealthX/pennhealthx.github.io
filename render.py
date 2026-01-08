@@ -11,11 +11,11 @@ import argparse
 import os
 import re
 import subprocess
-import yaml
-from datetime import date
-from markdown_it import MarkdownIt
 from pathlib import Path
 from typing import Final, Optional, Tuple, Union
+
+import yaml
+from markdown_it import MarkdownIt
 
 
 def render_html(
@@ -24,7 +24,7 @@ def render_html(
     head_fn: str = "head.component.html",
     header_fn: str = "header.component.html",
     footer_fn: str = "footer.component.html",
-    indent_size: int = 2
+    indent_size: int = 2,
 ) -> str:
     """
     Renders an HTML file from an input template file.
@@ -54,98 +54,39 @@ def render_html(
 
     # Body: Header
     with open(os.path.join(str(components_dir), header_fn)) as f:
-        html_lines.extend([
-            (2 * prefix) + line.rstrip() for line in f.readlines()
-        ])
+        html_lines.extend([(2 * prefix) + line.rstrip() for line in f.readlines()])
 
     # Body: User-Defined Content
     html_lines.append((2 * prefix) + "<main>")
-    if str(input_fn).lower().endswith("team.yml"):
-        with open(str(input_fn)) as f:
-            team_config = yaml.safe_load(f)
-        config = {
-            "title": "PennHealthX - Our Team",
-            "stylesheets": ["public/css/team.css"]
-        }
-
-        lines = [
-            "<div class='container'>",
-            prefix + f"<h1>{date.today().year} Executive Board</h1>",
-            prefix + "<div class='team-grid'>"
-        ]
-        for person in team_config:
-            headshot, name = person["headshot"], person["name"]
-            role, bio = person["role"], person['bio']
-            socials = {k: v for kv in person["contact"] for k, v in kv.items()}
-
-            lines.append((2 * prefix) + "<div class='team-card'>")
-            lines.append(
-                (3 * prefix) + f"<img src='{headshot}' alt='{name}' "
-                "class='team-image'>"
-            )
-            lines.append((3 * prefix) + "<div class='image-overlay'>")
-            lines.append((4 * prefix) + f"<h2 class='name'>{name}</h2>")
-            lines.append((4 * prefix) + f"<p class='role'>{role}</p>")
-            lines.append((3 * prefix) + "</div>")
-            lines.append((3 * prefix) + "<div class='hover-content'>")
-            lines.append((4 * prefix) + f"<h2 class='name'>{name}</h2>")
-            lines.append((4 * prefix) + f"<p class='role'>{role}</p>")
-            lines.append((4 * prefix) + f"<p class='bio-text'>{bio}</p>")
-            lines.append((4 * prefix) + "<div class='social-buttons'>")
-            for soc_type, soc_val in socials.items():
-                icon = {
-                    "email": "envelope",
-                    "website": "chrome",
-                    "twitter": "twitter",
-                    "linkedin": "linkedin"
-                }[soc_type]
-                if soc_type == "email" and not soc_val.startswith("mailto:"):
-                    soc_val = "mailto:" + soc_val
-                lines.append(
-                    (5 * prefix) + f"<a href='{soc_val}' target='_blank' "
-                    f"class='social-btn' aria-label='{soc_type.title()}'>"
-                    f"<i class='fa fa-{icon}'></i></a>"
-                )
-            lines.append((4 * prefix) + "</div>")
-            lines.append((3 * prefix) + "</div>")
-            lines.append((2 * prefix) + "</div>")
-        lines.extend([prefix + "</div>", "</div>"])
-        html_lines.extend([(3 * prefix) + line for line in lines])
+    if not any(
+        str(input_fn).lower().endswith(ext)
+        for ext in [".template.md", ".template.html"]
+    ):
+        print("Error: Make sure your file is a .template.md or " ".template.html file!")
+        exit()
+    with open(str(input_fn)) as f:
+        lines = [line.rstrip() for line in f.readlines()]
+    try:
+        assert lines.index("---") == 0
+        lines = lines[1:]
+        sep_idx = lines.index("---")
+    except Exception:
+        print(
+            "Error: Make sure your file starts with a block that looks "
+            "like:\n---\ntitle: My Title Here\n---"
+        )
+        exit()
+    input_config, input_data = lines[:sep_idx], lines[(sep_idx + 1) :]
+    config = yaml.safe_load("\n".join(input_config))
+    if md is None:
+        html_lines.extend([(3 * prefix) + line for line in input_data])
     else:
-        if not any(
-            str(input_fn).lower().endswith(ext)
-            for ext in [".template.md", ".template.html"]
-        ):
-            print(
-                "Error: Make sure your file is a .template.md or "
-                ".template.html file!"
-            )
-            exit()
-        with open(str(input_fn)) as f:
-            lines = [line.rstrip() for line in f.readlines()]
-        try:
-            assert lines.index("---") == 0
-            lines = lines[1:]
-            sep_idx = lines.index("---")
-        except Exception:
-            print(
-                "Error: Make sure your file starts with a block that looks "
-                "like:\n---\ntitle: My Title Here\n---"
-            )
-            exit()
-        input_config, input_data = lines[:sep_idx], lines[(sep_idx + 1):]
-        config = yaml.safe_load("\n".join(input_config))
-        if md is None:
-            html_lines.extend([(3 * prefix) + line for line in input_data])
-        else:
-            html_lines.append(md.render("\n".join(input_data)))
+        html_lines.append(md.render("\n".join(input_data)))
     html_lines.append((2 * prefix) + "</main>")
 
     # Body: Footer
     with open(os.path.join(str(components_dir), footer_fn)) as f:
-        html_lines.extend([
-            (2 * prefix) + line.rstrip() for line in f.readlines()
-        ])
+        html_lines.extend([(2 * prefix) + line.rstrip() for line in f.readlines()])
 
     html_lines.append(prefix + "</body>\n</html>")
 
@@ -178,24 +119,23 @@ def main() -> None:
         nargs="+",
         type=str,
         choices=[
-            os.path.join(src_dir, fn) for fn in os.listdir(src_dir)
-            if fn == "team.yml" or any(
-                fn.endswith(suffix) for suffix in valid_suffixes
-            )
+            os.path.join(src_dir, fn)
+            for fn in os.listdir(src_dir)
+            if any(fn.endswith(suffix) for suffix in valid_suffixes)
         ],
-        help="The input file(s) to render."
+        help="The input file(s) to render.",
     )
     fns_to_render = parser.parse_args().input_fn
 
     output_fns = []
     for input_fn in fns_to_render:
         html_str = render_html(input_fn, components_dir)
-        output_fn = input_fn[input_fn.index(str(src_dir) + "/"):]
-        output_fn = output_fn[(1 + len(str(src_dir))):]
-        for suffix in valid_suffixes + (".yml",):
+        output_fn = input_fn[input_fn.index(str(src_dir) + "/") :]
+        output_fn = output_fn[(1 + len(str(src_dir))) :]
+        for suffix in valid_suffixes:
             if not output_fn.endswith(suffix):
                 continue
-            output_fn = output_fn[:-len(suffix)] + ".html"
+            output_fn = output_fn[: -len(suffix)] + ".html"
             break
         with open(output_fn, "w") as f:
             f.write(html_str)
