@@ -43,3 +43,10 @@
     - email: yuri.choi@pennmedicine.upenn.edu
     - linkedin: http://www.linkedin.com/in/yuri-choi-0b3854133
   bio: MD candidate working on medical device and implant development and healthcare innovation. Previously Oliver Wyman.
+- name: Aaron Hsieh
+  role: VP, Curriculum
+  headshot: public/images/headshots/hseiha.jpeg
+  contact:
+    - email: aaron.hsieh@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/~aaronh/
+  bio: MD candidate working on medical AI applications, explainability, and safety. Previously at Meta, Snap, and Bloomberg.
