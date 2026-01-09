@@ -18,7 +18,7 @@
     <link rel="icon" type="image/x-icon" href="public/assets/favicon/favicon.ico">
     <link rel="manifest" href="public/assets/favicon/site.webmanifest">
     <meta name="theme-color" content="#1f1f1f;">
-    <script src="public/js/team-loader.js"></script>
+    <script src='public/js/team-loader.js'></script>
   </head>
   <body>
     <header>
@@ -37,20 +37,20 @@
           <!-- Team cards will be loaded here -->
         </div>
       </div>
+      <script>
+        fetch('src/team.yml')
+          .then(response => response.text())
+          .then(yamlText => {
+            const { year, cards } = generateTeamCards(yamlText);
+            document.getElementById('team-grid').innerHTML = cards.join('\n');
+            document.getElementById('team-year').textContent = (year || new Date().getFullYear()) + ' Executive Board';
+          })
+          .catch(error => {
+            console.error('Error loading team data:', error);
+            document.getElementById('team-grid').innerHTML = '<p style="color: red;">Error loading team data.</p>';
+          });
+      </script>
     </main>
-    <script>
-      fetch('/public/team.yml')
-        .then(response => response.text())
-        .then(yamlText => {
-          const { year, cards } = generateTeamCards(yamlText);
-          document.getElementById('team-grid').innerHTML = cards.join('\n');
-          document.getElementById('team-year').textContent = (year || new Date().getFullYear()) + ' Executive Board';
-        })
-        .catch(error => {
-          console.error('Error loading team data:', error);
-          document.getElementById('team-grid').innerHTML = '<p style="color: red;">Error loading team data.</p>';
-        });
-    </script>
     <footer>
       <div>
         <a href="/"><img class="logo" src="public/images/logo.svg" alt="PennHealthX"></a>

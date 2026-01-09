@@ -54,7 +54,9 @@ def render_html(
 
     # Body: Header
     with open(os.path.join(str(components_dir), header_fn)) as f:
-        html_lines.extend([(2 * prefix) + line.rstrip() for line in f.readlines()])
+        html_lines.extend([
+            (2 * prefix) + line.rstrip() for line in f.readlines()
+        ])
 
     # Body: User-Defined Content
     html_lines.append((2 * prefix) + "<main>")
@@ -62,7 +64,10 @@ def render_html(
         str(input_fn).lower().endswith(ext)
         for ext in [".template.md", ".template.html"]
     ):
-        print("Error: Make sure your file is a .template.md or " ".template.html file!")
+        print(
+            "Error: Make sure your file is a .template.md or "
+            ".template.html file!"
+        )
         exit()
     with open(str(input_fn)) as f:
         lines = [line.rstrip() for line in f.readlines()]
@@ -76,7 +81,7 @@ def render_html(
             "like:\n---\ntitle: My Title Here\n---"
         )
         exit()
-    input_config, input_data = lines[:sep_idx], lines[(sep_idx + 1) :]
+    input_config, input_data = lines[:sep_idx], lines[(sep_idx + 1):]
     config = yaml.safe_load("\n".join(input_config))
     if md is None:
         html_lines.extend([(3 * prefix) + line for line in input_data])
@@ -86,7 +91,9 @@ def render_html(
 
     # Body: Footer
     with open(os.path.join(str(components_dir), footer_fn)) as f:
-        html_lines.extend([(2 * prefix) + line.rstrip() for line in f.readlines()])
+        html_lines.extend([
+            (2 * prefix) + line.rstrip() for line in f.readlines()
+        ])
 
     html_lines.append(prefix + "</body>\n</html>")
 
@@ -98,7 +105,16 @@ def render_html(
                 for stylesheet in config.get(arg, [])
             ]
             html_str = html_str.replace(
-                f"{{{{ {arg} }}}}", ("\n" + (3 * prefix)).join(stylesheets)
+                f"{{{{ {arg} }}}}", ("\n" + (2 * prefix)).join(stylesheets)
+            )
+            continue
+        elif arg == "scripts":
+            scripts = [
+                f"<script src='{script}'></script>"
+                for script in config.get(arg, [])
+            ]
+            html_str = html_str.replace(
+                f"{{{{ {arg} }}}}", ("\n" + (2 * prefix)).join(scripts)
             )
             continue
         html_str = html_str.replace(f"{{{{ {arg} }}}}", str(config[arg]))
@@ -130,8 +146,8 @@ def main() -> None:
     output_fns = []
     for input_fn in fns_to_render:
         html_str = render_html(input_fn, components_dir)
-        output_fn = input_fn[input_fn.index(str(src_dir) + "/") :]
-        output_fn = output_fn[(1 + len(str(src_dir))) :]
+        output_fn = input_fn[input_fn.index(str(src_dir) + "/"):]
+        output_fn = output_fn[(1 + len(str(src_dir))):]
         for suffix in valid_suffixes:
             if not output_fn.endswith(suffix):
                 continue
