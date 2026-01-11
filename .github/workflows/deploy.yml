@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build Site
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build-site:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
