@@ -123,6 +123,8 @@ Questions and comments are welcome. Suggestions can be submitted through GitHub 
 
 [Michael Yao](mailto:michael.yao@pennmedicine.upenn.edu)
 
+[Aaron Hsieh](mailto:aaron.hsieh@pennmedicine.upenn.edu)
+
 ## License
 
 This repository is MIT licensed (see [LICENSE](LICENSE)).
