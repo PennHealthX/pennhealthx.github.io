@@ -68,15 +68,17 @@ Second, you only need to include the HTML elements that you would include within
 
 Check out [`src/index.template.html`](src/index.template.html) for an example.
 
-### Building a Webpage
+### Building the Website
 
-Once you have a completed `template.md` or `template.html` webpage, you can build it by running
+Technically, this step is automatically done for you. Keep reading if you're curious. Otherwise, skip to the next section.
 
+Once you have created or modified `template.md` or `template.html` files, you can manually build the entire website by running:
+
+```py
+python3 render.py
 ```
-python3 render.py src/my-webpage.template.md  # or python3 render.py src/my-webpage.template.html
-```
 
-This will create a rendered `my-webpage.html` file in the working directory. To preview this webpage, you can open the file using your favorite web browser.
+This will process all template files in the `src` directory and generate the corresponding HTML files in the `docs` directory. When we deploy the website, [`render.py`](https://github.com/PennHealthX/pennhealthx.github.io/blob/main/render.py) will automatically execute and create the `docs` folder. Github pages will then serve our website from `docs`.
 
 ### Updating the [Team](https://www.pennhealthx.com/team) Page
 
@@ -91,23 +93,13 @@ If you are updating the teams page for a new year, edit the first line to the co
 
 ### Testing Your Changes
 
-To test your website changes locally before deploying, you'll need to run a local web server.
+To test your website changes locally before deploying, you'll need to run a local web server:
 
-First, ensure you have [Node.js](https://nodejs.org/) installed on your computer. This will give you access to the `npx` command. You can verify Node.js is installed by running the following in your terminal:
-
-```
-node --version
+```py
+python dev.py
 ```
 
-If Node.js is not installed, download it from [nodejs.org](https://nodejs.org/).
-
-Once Node.js is installed, you can start a local web server from the repository directory:
-
-```
-npx serve -p 8000
-```
-
-This will start a local server at `http://localhost:8080`. Open this URL in your web browser to preview your website changes locally.
+You can find your website at `http://localhost:8000`. Any changes you make to files in `src` will update in the website live, so no need to restart the server every time you make a change.
 
 
 ### Deploying Your Changes

@@ -8,21 +8,36 @@ Author(s):
 Licensed under the MIT License. Copyright PennHealthX 2026.
 """
 import os
+import pathlib
 import re
 import shutil
-import subprocess
-from pathlib import Path
-from typing import Dict, Any
+from typing import Any, Dict
 
 import yaml
 from markdown_it import MarkdownIt
+
+root = pathlib.Path(__file__).parent.resolve()
+docs_path = os.path.join(root, "docs")
+public_path = os.path.join(root, "public")
+src_path = os.path.join(root, "src")
+
+
+def open_file(file, *args, **kwargs):
+    """
+    Like built-in open(), but paths are resolved relative to project root.
+    Absolute paths are left unchanged.
+    """
+    return open(os.path.join(root, file), *args, **kwargs)
+
 
 def is_valid_front_matter(text: str) -> int:
     """Checks if text has valid front matter and returns the end line"""
     lines = text.split("\n")
     indices = [i for i, line in enumerate(lines) if line == "---"][:2]
-    error_message = "Error: Make sure your file starts with a block that looks " \
-            "like:\n---\ntitle: My Title Here\n---"
+    error_message = (
+        "Error: Make sure your file starts with a block that looks "
+        "like:\n---\ntitle: My Title Here\n---"
+    )
 
     if len(indices) != 2:
         raise ValueError(error_message)
@@ -33,11 +48,13 @@ def is_valid_front_matter(text: str) -> int:
 
     return end
 
+
 def parse_config(text: str) -> Dict[str, Any]:
     """Extract YAML frontmatter from markdown file."""
     end = is_valid_front_matter(text)
     lines = text.split("\n")
     return yaml.safe_load("\n".join(lines[1:end]))
+
 
 def markdown_to_html(text: str) -> str:
     """Convert markdown content (after frontmatter) to HTML."""
@@ -48,6 +65,7 @@ def markdown_to_html(text: str) -> str:
     md = MarkdownIt("commonmark", {"breaks": True, "html": True})
     md = md.enable("table")
     return md.render(content)
+
 
 def fill_template_variables(html: str, config: Dict[str, Any]) -> str:
     """Replace {{ variable }} placeholders with config values."""
@@ -60,8 +78,7 @@ def fill_template_variables(html: str, config: Dict[str, Any]) -> str:
             html = html.replace(f"{{{{ {arg} }}}}", "\n  ".join(stylesheets))
         elif arg == "scripts":
             scripts = [
-                f"<script src='{script}'></script>"
-                for script in config.get(arg, [])
+                f"<script src='{script}'></script>" for script in config.get(arg, [])
             ]
             html = html.replace(f"{{{{ {arg} }}}}", "\n  ".join(scripts))
         else:
@@ -69,38 +86,43 @@ def fill_template_variables(html: str, config: Dict[str, Any]) -> str:
 
     return html
 
+
 def generate_team_cards_html(team_yml_path: str) -> str:
     """Generate team cards HTML from team.yml file."""
-    with open(team_yml_path, "r") as f:
+    with open_file(team_yml_path, "r") as f:
         team_data = yaml.safe_load(f)
 
     # Icon mapping for contact types
     icon_map = {
-        'email': 'envelope',
-        'website': 'chrome',
-        'twitter': 'twitter',
-        'linkedin': 'linkedin'
+        "email": "envelope",
+        "website": "chrome",
+        "twitter": "twitter",
+        "linkedin": "linkedin",
     }
 
     cards = []
     for member in team_data:
         # Skip the year entry
-        if 'year' in member:
+        if "year" in member:
             continue
 
         # Generate social buttons
         social_buttons = []
-        for contact_item in member.get('contact', []):
+        for contact_item in member.get("contact", []):
             for contact_type, url in contact_item.items():
-                icon = icon_map.get(contact_type, 'link')
-                href = f"mailto:{url}" if contact_type == 'email' and not url.startswith('mailto:') else url
+                icon = icon_map.get(contact_type, "link")
+                href = (
+                    f"mailto:{url}"
+                    if contact_type == "email" and not url.startswith("mailto:")
+                    else url
+                )
                 label = contact_type.capitalize()
                 social_buttons.append(
                     f'<a href="{href}" target="_blank" class="social-btn" aria-label="{label}">'
                     f'<i class="fa fa-{icon}"></i></a>'
                 )
 
-        social_html = '\n                '.join(social_buttons)
+        social_html = "\n                ".join(social_buttons)
 
         # Generate team card HTML
         card = f"""<div class="team-card">
@@ -120,126 +142,131 @@ def generate_team_cards_html(team_yml_path: str) -> str:
           </div>"""
         cards.append(card)
 
-    return '\n'.join(cards)
+    return "\n".join(cards)
 
-# load components
-with open("_components/footer.component.html", "r") as f:
-    footer = f.read()
-with open("_components/head.component.html", "r") as f:
-    head = f.read()
-with open("_components/header.component.html", "r") as f:
-    header = f.read()
 
-# delete docs folder if it exists, then create a fresh one
-if os.path.exists("docs"):
-    shutil.rmtree("docs")
-os.makedirs("docs")
+def render() -> None:
+    # load components
+    with open_file("_components/footer.component.html", "r") as f:
+        footer = f.read()
+    with open_file("_components/head.component.html", "r") as f:
+        head = f.read()
+    with open_file("_components/header.component.html", "r") as f:
+        header = f.read()
 
-# copy public folder to docs so assets are accessible
-if os.path.exists("public"):
-    shutil.copytree("public", "docs/public")
-    print("Copied public/ folder to docs/")
+    # delete docs folder if it exists, then create a fresh one
+    if os.path.exists(docs_path):
+        shutil.rmtree(docs_path)
+    os.makedirs(docs_path)
 
-# process each template file in src
-src_files = os.listdir("src")
-for filename in src_files:
-    if not (filename.endswith(".template.md") or filename.endswith(".template.html")):
-        continue
+    # copy public folder to docs so assets are accessible
+    if os.path.exists(public_path):
+        shutil.copytree(public_path, os.path.join(docs_path, "public"))
 
-    filepath = os.path.join("src", filename)
-    with open(filepath, "r") as f:
-        text = f.read()
+    # process each template file in src
+    src_files = os.listdir(src_path)
+    for filename in src_files:
+        if not (
+            filename.endswith(".template.md") or filename.endswith(".template.html")
+        ):
+            continue
 
-    # check if front matter is valid
-    end = is_valid_front_matter(text)
+        filepath = os.path.join("src", filename)
+        with open_file(filepath, "r") as f:
+            text = f.read()
 
-    # get config (e.g. stylesheets, scripts) from front matter
-    config = parse_config(text)
-
-    if filename.endswith(".template.md"):
-        content_html = markdown_to_html(text)
-    else:
+        # check if front matter is valid
         end = is_valid_front_matter(text)
-        lines = text.split("\n")
-        content_html = "\n".join(lines[end + 1:])
 
-    html = f"""<!DOCTYPE html>
-<html lang='en'>
-  {head}
-  <body>
-    {header}
-    <main>
-{content_html}
-    </main>
-    {footer}
-  </body>
-</html>"""
+        # get config (e.g. stylesheets, scripts) from front matter
+        config = parse_config(text)
 
-    html = fill_template_variables(html, config)
+        if filename.endswith(".template.md"):
+            content_html = markdown_to_html(text)
+        else:
+            end = is_valid_front_matter(text)
+            lines = text.split("\n")
+            content_html = "\n".join(lines[end + 1:])
 
-    if filename.endswith(".template.md"):
-        output_filename = filename.replace(".template.md", ".html")
-    else:
-        output_filename = filename.replace(".template.html", ".html")
+        html = f"""<!DOCTYPE html>
+    <html lang='en'>
+    {head}
+    <body>
+        {header}
+        <main>
+    {content_html}
+        </main>
+        {footer}
+    </body>
+    </html>"""
 
-    output_path = os.path.join("docs", output_filename)
-    with open(output_path, "w") as f:
-        f.write(html)
+        html = fill_template_variables(html, config)
 
-    print(f"Generated {output_path}")
+        if filename.endswith(".template.md"):
+            output_filename = filename.replace(".template.md", ".html")
+        else:
+            output_filename = filename.replace(".template.html", ".html")
 
-# generate team.html from team.yml
-team_yml_path = "src/team.yml"
-if os.path.exists(team_yml_path):
+        output_path = os.path.join(docs_path, output_filename)
+        with open_file(output_path, "w") as f:
+            f.write(html)
 
-    # Read team data to get the year
-    with open(team_yml_path, "r") as f:
-        team_data = yaml.safe_load(f)
+    # generate team.html from team.yml
+    team_yml_path = os.path.join(src_path, "team.yml")
+    if os.path.exists(team_yml_path):
 
-    year = None
-    for item in team_data:
-        if 'year' in item:
-            year = item['year']
-            break
+        # Read team data to get the year
+        with open_file(team_yml_path, "r") as f:
+            team_data = yaml.safe_load(f)
 
-    year_display = year or 2026
+        year = None
+        for item in team_data:
+            if "year" in item:
+                year = item["year"]
+                break
 
-    # Create team config (since the yaml file doesn't have front matter)
-    team_config = {
-        "title": "PennHealthX - Our Team",
-        "stylesheets": ["/public/css/team.css"]
-    }
+        year_display = year or 2026
 
-    # Generate team cards HTML
-    team_cards_html = generate_team_cards_html(team_yml_path)
+        # Create team config (since the yaml file doesn't have front matter)
+        team_config = {
+            "title": "PennHealthX - Our Team",
+            "stylesheets": ["/public/css/team.css"],
+        }
 
-    # Wrap in container div with proper structure matching team.template.html
-    content_html = f"""<div class='container'>
-  <h1 id="team-year">{year_display} Executive Board</h1>
-  <div class='team-grid' id="team-grid">
-{team_cards_html}
-  </div>
-</div>"""
+        # Generate team cards HTML
+        team_cards_html = generate_team_cards_html(team_yml_path)
 
-    # Construct full HTML page
-    html = f"""<!DOCTYPE html>
-<html lang='en'>
-  {head}
-  <body>
-    {header}
-    <main>
-{content_html}
-    </main>
-    {footer}
-  </body>
-</html>"""
+        # Wrap in container div with proper structure matching team.template.html
+        content_html = f"""<div class='container'>
+    <h1 id="team-year">{year_display} Executive Board</h1>
+    <div class='team-grid' id="team-grid">
+    {team_cards_html}
+    </div>
+    </div>"""
 
-    # Fill in template variables
-    html = fill_template_variables(html, team_config)
+        # Construct full HTML page
+        html = f"""<!DOCTYPE html>
+    <html lang='en'>
+    {head}
+    <body>
+        {header}
+        <main>
+    {content_html}
+        </main>
+        {footer}
+    </body>
+    </html>"""
 
-    # Write output file
-    output_path = os.path.join("docs", "team.html")
-    with open(output_path, "w") as f:
-        f.write(html)
+        # Fill in template variables
+        html = fill_template_variables(html, team_config)
 
-    print(f"Generated {output_path}")
+        # Write output file
+        output_path = os.path.join(docs_path, "team.html")
+        with open_file(output_path, "w") as f:
+            f.write(html)
+
+    print("✅ Build successful")
+
+
+if __name__ == "__main__":
+    render()

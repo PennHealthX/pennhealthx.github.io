@@ -4,3 +4,4 @@ mypy
 markdown-it-py
 isort
 black
+watchdog
