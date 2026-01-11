@@ -33,13 +33,13 @@ jobs:
 
       - name: Add .nojekyll file and CNAME
         run: |
-          touch docs/.nojekyll
-          echo "pennhealthx.com" > docs/CNAME
+          touch dist/.nojekyll
+          echo "pennhealthx.com" > dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./dist
           publish_branch: gh-pages
           force_orphan: true

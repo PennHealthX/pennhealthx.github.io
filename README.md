@@ -78,7 +78,7 @@ Once you have created or modified `template.md` or `template.html` files, you ca
 python3 render.py
 ```
 
-This will process all template files in the `src` directory and generate the corresponding HTML files in the `docs` directory. When we deploy the website, [`render.py`](https://github.com/PennHealthX/pennhealthx.github.io/blob/main/render.py) will automatically execute and create the `docs` folder. Github pages will then serve our website from `docs`.
+This will process all template files in the `src` directory and generate the corresponding HTML files in the `dist` directory. When we deploy the website, [`render.py`](https://github.com/PennHealthX/pennhealthx.github.io/blob/main/render.py) will automatically execute and create the `dist` folder. Github pages will then serve our website from `dist`.
 
 ### Updating the [Team](https://www.pennhealthx.com/team) Page
 
@@ -104,7 +104,7 @@ You can find your website at `http://localhost:8000`. Any changes you make to fi
 
 ### Deploying Your Changes
 
-Once you are satisfied with your changes, you can create a new [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to add your changes to the website:
+Once you are satisfied with your changes, you can create a new [pull request](https://dist.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to add your changes to the website:
 
 ```
 git checkout -b my-new-branch-name  # Replace `my-new-branch-name` with a name for your branch.

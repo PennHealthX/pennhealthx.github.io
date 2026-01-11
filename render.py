@@ -17,7 +17,7 @@ import yaml
 from markdown_it import MarkdownIt
 
 root = pathlib.Path(__file__).parent.resolve()
-docs_path = os.path.join(root, "docs")
+dist_path = os.path.join(root, "dist")
 public_path = os.path.join(root, "public")
 src_path = os.path.join(root, "src")
 
@@ -154,14 +154,14 @@ def render() -> None:
     with open_file("_components/header.component.html", "r") as f:
         header = f.read()
 
-    # delete docs folder if it exists, then create a fresh one
-    if os.path.exists(docs_path):
-        shutil.rmtree(docs_path)
-    os.makedirs(docs_path)
+    # delete dist folder if it exists, then create a fresh one
+    if os.path.exists(dist_path):
+        shutil.rmtree(dist_path)
+    os.makedirs(dist_path)
 
-    # copy public folder to docs so assets are accessible
+    # copy public folder to dist so assets are accessible
     if os.path.exists(public_path):
-        shutil.copytree(public_path, os.path.join(docs_path, "public"))
+        shutil.copytree(public_path, os.path.join(dist_path, "public"))
 
     # process each template file in src
     src_files = os.listdir(src_path)
@@ -207,7 +207,7 @@ def render() -> None:
         else:
             output_filename = filename.replace(".template.html", ".html")
 
-        output_path = os.path.join(docs_path, output_filename)
+        output_path = os.path.join(dist_path, output_filename)
         with open_file(output_path, "w") as f:
             f.write(html)
 
@@ -261,7 +261,7 @@ def render() -> None:
         html = fill_template_variables(html, team_config)
 
         # Write output file
-        output_path = os.path.join(docs_path, "team.html")
+        output_path = os.path.join(dist_path, "team.html")
         with open_file(output_path, "w") as f:
             f.write(html)
 

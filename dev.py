@@ -18,7 +18,7 @@ from watchdog.observers import Observer
 
 from render import render
 
-DIRECTORY = "docs"
+DIRECTORY = "dist"
 
 
 class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
