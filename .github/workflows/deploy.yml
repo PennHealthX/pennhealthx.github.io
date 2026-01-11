@@ -31,9 +31,10 @@ jobs:
         run: |
           python render.py
 
-      - name: Add .nojekyll file to disable Jekyll
+      - name: Add .nojekyll file and CNAME
         run: |
           touch docs/.nojekyll
+          echo "pennhealthx.com" > docs/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
