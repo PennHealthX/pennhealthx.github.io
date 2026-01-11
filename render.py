@@ -87,11 +87,8 @@ def fill_template_variables(html: str, config: Dict[str, Any]) -> str:
     return html
 
 
-def generate_team_cards_html(team_yml_path: str) -> str:
-    """Generate team cards HTML from team.yml file."""
-    with open_file(team_yml_path, "r") as f:
-        team_data = yaml.safe_load(f)
-
+def generate_team_cards_html(team_data: list) -> str:
+    """Generate team cards HTML from team data."""
     # Icon mapping for contact types
     icon_map = {
         "email": "envelope",
@@ -219,13 +216,7 @@ def render() -> None:
         with open_file(team_yml_path, "r") as f:
             team_data = yaml.safe_load(f)
 
-        year = None
-        for item in team_data:
-            if "year" in item:
-                year = item["year"]
-                break
-
-        year_display = year or 2026
+        year = team_data[0]["year"] if "year" in team_data[0] else 2026
 
         # Create team config (since the yaml file doesn't have front matter)
         team_config = {
@@ -234,11 +225,11 @@ def render() -> None:
         }
 
         # Generate team cards HTML
-        team_cards_html = generate_team_cards_html(team_yml_path)
+        team_cards_html = generate_team_cards_html(team_data)
 
         # Wrap in container div with proper structure matching team.template.html
         content_html = f"""<div class='container'>
-    <h1 id="team-year">{year_display} Executive Board</h1>
+    <h1 id="team-year">{year} Executive Board</h1>
     <div class='team-grid' id="team-grid">
     {team_cards_html}
     </div>
