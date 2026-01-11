@@ -2,4 +2,9 @@ exclude:
   - README.md
   - LICENSE
   - render.py
+  - dev.py
   - requirements.txt
+  - src/
+  - _components/
+  - .gitignore
+  - public/

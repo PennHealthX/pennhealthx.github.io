@@ -4,19 +4,19 @@ title: PennHealthX Initiatives
 
 <!-- NOTE: A single `#` should be used for the title of the page. -->
 <!-- NOTE: Additional hashtags, like `##`, correspond to subtitles like section and paragraph headers. -->
-# Current Initiatives 
+# Current Initiatives
 
 Check out a list of our current projects and initiatives below.
 
 <!-- NOTE: (Advanced) You can also include HTML code in Markdown as well, such as `details` elements which are not native to Markdown. -->
-<details>
+<details id="podcast">
 <summary><h2>&ensp;&#127897; PennHealthX Podcast</h2></summary>
 
 <!-- NOTE: Hyperlinks can be included as [my text](URL to link to). -->
 The Penn HealthX Podcast focuses on the intersection of medicine and business, with an emphasis on healthcare management, entrepreneurship, and technology (H-MET). Listen now on [Apple Podcasts](https://podcasts.apple.com/us/podcast/the-pennhealthx-podcast/id1271378904) and [SoundCloud](https://soundcloud.com/pennhealthxpodcast).
 </details>
 
-<details>
+<details id="sdoh">
 <summary><h2>&ensp;&#128640; SDoH Accelerator</h2></summary>
 
 Our SDoH Accelerator program provides early-stage startups and organizations working to improve social determinants of health (SDoHs) with pro-bono support from Perelman School of Medicine Students. PSOM consultants are paid fully by PennHealthX at no cost to partnered startups.
@@ -27,7 +27,7 @@ Our SDoH Accelerator program provides early-stage startups and organizations wor
 **Interested PSOM student-consultants** should join the PennHealthX listserv to stay up-to-date on new SDoH Accelerator opportunities. Contact our [VPs: SDoH Accelerator](/team) or [email us](mailto:pennhealthx@gmail.com) for more information. Applications are accepted on a rolling basis.
 </details>
 
-<details>
+<details id="ventures">
 <summary><h2>&ensp;&#127911; PennHealthX Venture Fund</h2></summary>
 
 We offer **non-dilutive venture funding** for PSOM students developing innovative ideas in healthcare. The HealthX Venture Fund is a student-run fund that financially backs Penn students working to fill a need in our healthcare system. Awarded teams retain complete ownership of their idea — no equity or loan is involved. Teams can receive up to **$15,000** in funding to develop their ideas. Applications are accepted on a rolling basis.
@@ -96,7 +96,7 @@ Priority will be given to ventures from current PSOM students. Applications for 
 
 </details>
 
-<details>
+<details id="h-met-certificate">
 <summary><h2>&ensp;&#128209; H-MET Certificate</h2></summary>
 
 Our flagship [**Healthcare Management, Entrepreneurship, and Technology (H-MET) Certificate Program**](https://www.med.upenn.edu/student/areas-of-concentration.html#accordion-7) enables future physicians to become leaders in our healthcare system. Through coursework, workshops, and real-world experiences, the H-MET Certificate Program gives medical students the fundamental tools they  need to turn an innovative idea into a policy, business, or product.
@@ -110,7 +110,7 @@ The requirements of the certificate program include all of the following:
 Contact our [VPs: Curriculum](/team) with any questions.
 </details>
 
-<details>
+<details id="internships">
 <summary><h2>&ensp;&#128391; Internship Awards</h2></summary>
 
 We financially support PSOM medical students to pursue summer opportunities in healthcare management, entrepreneurship, and technology. We are especially interested in supporting projects that students would not otherwise encounter or be able to fund, such as unpaid or underpaid summer internships at startup companies. Recipients are eligible for up to $1,500 in funding and the chance to present their work in the fall at the annual [PennHealthX conference](/conference).
@@ -129,3 +129,4 @@ Direct any questions to our [VPs: Entrepreneurship/Ventures](/team).
 
 <!-- NOTE: (Advanced) You can also include custom Javascript in Markdown files. -->
 <script src="public/js/animate_details.js" defer></script>
+<script src="public/js/open_section.js" defer></script>
