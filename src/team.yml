@@ -78,3 +78,10 @@
     - email: evrim.ozcan@pennmedicine.upenn.edu
     - linkedin: www.linkedin.com/in/evrim-ozcan-61312b1a6
   bio: MD candidate building a medical device startup alongside research in surgical risk stratification. Previously Biomedical Engineering (BS) at Brown University, research at Boston Children’s Hospital.
+- name: Christian Nguyen
+  role: VP, SDoH Accelerator
+  headshot: public/images/headshots/nguyenc.jpg
+  contact:
+    - email: christian.nguyen@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/christian-nguyen-bme/
+  bio: MD candidate working on clinical workflow optimization and clinical informatics. Previously University of Florida, Oak Street Health.
