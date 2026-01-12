@@ -38,7 +38,7 @@
   bio: MD candidate working on medical student exposure to innovative research and device development. Previously University of Pittsburgh, Penn.
   - name: Min Jae Kim
   role: VP, R&D
-  headshot: public/images/headshots/kimm.jpg
+  headshot: public/images/headshots/kimm.png
   contact:
     - email: minjae.kim@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/min-jae-kim-a39435157/
@@ -71,3 +71,10 @@
     - email: ruhi.sayana@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/ruhisayana/
   bio: MD candidate working on AI for biomedical science, medical AI safety/interpretability. Previously CS (BS/MS) at Stanford, Quadrant Health.
+- name: Evrim Efe Ozcan
+  role: VP, Conference
+  headshot: public/images/headshots/ozcane.jpg
+  contact:
+    - email: evrim.ozcan@pennmedicine.upenn.edu
+    - linkedin: www.linkedin.com/in/evrim-ozcan-61312b1a6
+  bio: MD candidate building a medical device startup alongside research in surgical risk stratification. Previously Biomedical Engineering (BS) at Brown University, research at Boston Children’s Hospital.
