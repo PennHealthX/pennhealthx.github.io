@@ -120,6 +120,13 @@
     - email: aditi.mukkara@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/aditi-mukkara-904744229/
   bio: MD candidate interested in exploring the intersection of healthcare and technology to advance access and patient-centered care. Previously CS at CWRU.
+- name: William Hayes
+  role: VP, Podcast
+  headshot: public/images/headshots/hayesw.jpeg
+  contact:
+    - email: hayeswi@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/william-e-hayes
+  bio: MD candidate and biomedical engineer focused on healthcare innovation at the intersection of medical devices and patient-centered clinical care.
 - name: Isabella Stuart
   role: VP, Podcast
   headshot: public/images/headshots/stuarti.jpeg
