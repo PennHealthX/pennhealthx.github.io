@@ -42,14 +42,14 @@
   contact:
     - email: minjae.kim@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/min-jae-kim-a39435157/
-  bio: MD/PhD candidate focused on making student-led biotechnology entrepreneurship initiatives more accessible. Previously contributed to PedioNav, an image-guided epilepsy surgery platform developed through the Penn and CHOP Neurosurgery departments.
+  bio: MD/PhD candidate focused on making student-led biotechnology entrepreneurship initiatives more accessible. Previously contributed to PedioNav.
 - name: Nina Nair
   role: VP, R&D
   headshot: public/images/headshots/nairn.jpeg
   contact:
     - email: nina.nair@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/nina-nair-a25522284
-  bio: MD candidate focused on medical device innovation and developing platforms for students to work on MedTech projects. Previously BME @ Hopkins, medical device R&D @ Hopkins Med.
+  bio: MD candidate focused on medical device innovation and developing platforms for students to work on MedTech projects.
 - name: Yuri Choi
   role: VP, Marketing
   headshot: public/images/headshots/choiy.jpeg
@@ -70,7 +70,7 @@
   contact:
     - email: ankita.reddy@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/ankita-reddy-a111556a/
-  bio: MD/PhD candidate studying the social and cultural dimensions of AI implementation in large healthcare systems. Previously medical diagnostic startup, Butterfly Network. 
+  bio: MD/PhD candidate studying the social and cultural dimensions of AI implementation in large healthcare systems.
 - name: Ruhi Sayana
   role: VP, AI
   headshot: public/images/headshots/sayanar.jpg
@@ -84,7 +84,7 @@
   contact:
     - email: evrim.ozcan@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/evrim-ozcan-61312b1a6
-  bio: MD candidate building a medical device startup alongside research in surgical risk stratification. Previously Biomedical Engineering (BS) at Brown University, research at Boston Children’s Hospital.
+  bio: MD candidate building a medical device startup alongside research in surgical risk stratification.
 - name: Chaitanya Vankireddy
   role: VP, Conference
   headshot: public/images/headshots/vankireddyc.jpg
@@ -105,7 +105,7 @@
   contact:
     - email: eugene.cha@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/eugene-cha
-  bio: MD candidate focused on expanding psychiatric care accessibility through brain stimulator development, neuroimaging innovation, and VC investment. Previously Villanova University, CNDS, FTD Center, and CHOP. 
+  bio: MD candidate focused on expanding psychiatric care accessibility through brain stimulator development, neuroimaging innovation, and VC investment.
 - name: Pierre Younes
   role: VP, Careers and Mentorship
   headshot: public/images/headshots/younesp.jpg
@@ -126,4 +126,4 @@
   contact:
     - email: isabella.stuart@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/isabella-stuart-03196b1b2
-  bio: MD candidate interested in developing sustainable innovations that align hospital incentives with improved patient outcomes and system efficiency. Previously Ross.
+  bio: MD candidate interested in developing sustainable innovations that align hospital incentives with improved patient outcomes and system efficiency.
