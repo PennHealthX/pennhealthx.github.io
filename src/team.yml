@@ -43,6 +43,13 @@
     - email: minjae.kim@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/min-jae-kim-a39435157/
   bio: MD/PhD candidate focused on making student-led biotechnology entrepreneurship initiatives more accessible. Previously contributed to PedioNav, an image-guided epilepsy surgery platform developed through the Penn and CHOP Neurosurgery departments.
+- name: Nina Nair
+  role: VP, R&D
+  headshot: public/images/headshots/nairn.jpeg
+  contact:
+    - email: nina.nair@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/nina-nair-a25522284
+  bio: MD candidate focused on medical device innovation and developing platforms for students to work on MedTech projects. Previously BME @ Hopkins, medical device R&D @ Hopkins Med.
 - name: Yuri Choi
   role: VP, Marketing
   headshot: public/images/headshots/choiy.jpeg
@@ -106,6 +113,13 @@
     - email: pierre.younes@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/pierre-a-younes
   bio: MD candidate interested in the development of neural augmentation technologies. Previous University of Miami, Sylvester Comprehensive Cancer Center.
+- name: Aditi Mukkara
+  role: VP, Careers and Mentorship
+  headshot: public/images/headshots/mukkaraa.jpeg
+  contact:
+    - email: aditi.mukkara@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/aditi-mukkara-904744229/
+  bio: MD candidate interested in exploring the intersection of healthcare and technology to advance access and patient-centered care. Previously CS at CWRU.
 - name: Isabella Stuart
   role: VP, Podcast
   headshot: public/images/headshots/stuarti.jpeg
