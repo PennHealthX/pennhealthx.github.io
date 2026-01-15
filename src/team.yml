@@ -34,7 +34,7 @@
   headshot: public/images/headshots/jankowskim.jpg
   contact:
     - email: margaret.jankowski@pennmedicine.upenn.edu
-    - linkedin: http://www.linkedin.com/in/margaret-j-1a4223141
+    - linkedin: https://www.linkedin.com/in/margaret-j-1a4223141
   bio: MD candidate working on medical student exposure to innovative research and device development. Previously University of Pittsburgh, Penn.
 - name: Min Jae Kim
   role: VP, R&D
@@ -48,7 +48,7 @@
   headshot: public/images/headshots/choiy.jpeg
   contact:
     - email: yuri.choi@pennmedicine.upenn.edu
-    - linkedin: http://www.linkedin.com/in/yuri-choi-0b3854133
+    - linkedin: https://www.linkedin.com/in/yuri-choi-0b3854133
   bio: MD candidate working on medical device and implant development and healthcare innovation. Previously Oliver Wyman.
 - name: Aaron Hsieh
   role: VP, Curriculum
@@ -76,8 +76,15 @@
   headshot: public/images/headshots/ozcane.JPG
   contact:
     - email: evrim.ozcan@pennmedicine.upenn.edu
-    - linkedin: www.linkedin.com/in/evrim-ozcan-61312b1a6
+    - linkedin: https://www.linkedin.com/in/evrim-ozcan-61312b1a6
   bio: MD candidate building a medical device startup alongside research in surgical risk stratification. Previously Biomedical Engineering (BS) at Brown University, research at Boston Children’s Hospital.
+- name: Chaitanya Vankireddy
+  role: VP, Conference
+  headshot: public/images/headshots/cankireddyc.jpg
+  contact:
+    - email: chaitanya.vankireddy@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/chaitanya-vankireddy-75656a129
+  bio: MD candidate interested in healthcare investment and health systems design. Previously Neuroscience at Penn (BA), MidCap Financial.
 - name: Christian Nguyen
   role: VP, SDoH Accelerator
   headshot: public/images/headshots/nguyenc.jpg
@@ -90,5 +97,19 @@
   headshot: public/images/headshots/chae.jpg
   contact:
     - email: eugene.cha@pennmedicine.upenn.edu
-    - linkedin: www.linkedin.com/in/eugene-cha
-  bio: MD Candidate focused on expanding psychiatric care accessibility through brain stimulator development, neuroimaging innovation, and VC investment. Previously Villanova University, CNDS, FTD Center, and CHOP. 
+    - linkedin: https://www.linkedin.com/in/eugene-cha
+  bio: MD candidate focused on expanding psychiatric care accessibility through brain stimulator development, neuroimaging innovation, and VC investment. Previously Villanova University, CNDS, FTD Center, and CHOP. 
+- name: Pierre Younes
+  role: VP, Careers and Mentorship
+  headshot: public/images/headshots/younesp.jpg
+  contact:
+    - email: pierre.younes@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/pierre-a-younes
+  bio: MD candidate interested in the development of neural augmentation technologies. Previous University of Miami, Sylvester Comprehensive Cancer Center.
+- name: Isabella Stuart
+  role: VP, Podcast
+  headshot: public/images/headshots/stuarti.jpg
+  contact:
+    - email: isabella.stuart@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/isabella-stuart-03196b1b2
+  bio: MD candidate interested in developing sustainable innovations that align hospital incentives with improved patient outcomes and system efficiency. Previously Ross.
