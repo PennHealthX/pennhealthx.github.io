@@ -64,6 +64,13 @@
     - email: aaron.hsieh@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/~aaronh/
   bio: MD candidate working on medical AI applications, explainability, and safety. Previously Meta, Snap, and Bloomberg.
+- name: Freya Gulamali
+  role: VP, Curriculum
+  headshot: public/images/headshots/gulamaf.jpg
+  contact:
+    - email: freya.gulamali@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/freya-gulamali-381719190/
+  bio: MD candidate working on health AI risk prediction tools and related policy. Previously CS at Duke.
 - name: Ankita Reddy
   role: VP, AI
   headshot: public/images/headshots/reddya.jpg
@@ -119,7 +126,7 @@
   contact:
     - email: eugene.cha@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/eugene-cha
-  bio: MD candidate focused on expanding psychiatric care accessibility through brain stimulator development, neuroimaging innovation, and VC investment.
+  bio: MD candidate focused on expanding psychiatric care accessibility through brain stimulator development, imaging innovation, and VC investment.
 - name: Rohit Khurana
   role: VP, Ventures & Entrepreneurship
   headshot: public/images/headshots/khuranar.jpeg
@@ -134,14 +141,14 @@
   contact:
     - email: pierre.younes@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/pierre-a-younes
-  bio: MD candidate interested in the development of neural augmentation technologies. Previous University of Miami, Sylvester Comprehensive Cancer Center.
+  bio: MD candidate interested in the development of neural augmentation technologies. Previous UMiami, Sylvester Comprehensive Cancer Center.
 - name: Aditi Mukkara
   role: VP, Careers and Mentorship
   headshot: public/images/headshots/mukkaraa.jpeg
   contact:
     - email: aditi.mukkara@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/aditi-mukkara-904744229/
-  bio: MD candidate interested in exploring the intersection of healthcare and technology to advance access and patient-centered care. Previously CS at CWRU.
+  bio: MD candidate interested in exploring the intersection of healthcare and technology to advance access and patient care. Previously CS at CWRU.
 - name: William Hayes
   role: VP, Podcast
   headshot: public/images/headshots/hayesw.jpg
