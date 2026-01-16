@@ -99,6 +99,20 @@
     - email: christian.nguyen@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/christian-nguyen-bme/
   bio: MD candidate working on clinical workflow optimization and clinical informatics. Previously University of Florida, Oak Street Health.
+- name: Shreya Mehta
+  role: VP, SDoH Accelerator
+  headshot: public/images/headshots/mehtas.jpeg
+  contact:
+    - email: mehtas@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/shreya-mehta-521a43219/
+  bio: MD candidate interested in the development of new therapeutics and healthcare innovations and the policymaking governing their equitable distribution.
+- name: Sarah Lalani
+  role: VP, SDoH Accelerator
+  headshot: public/images/headshots/lalanis.jpeg
+  contact:
+    - email: Sarah.Lalani@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/sarah-lalani
+  bio: MD candidate passionate about healthcare affordability and drug pricing policy.
 - name: Eugene Cha
   role: VP, Ventures & Entrepreneurship
   headshot: public/images/headshots/chae.jpg
