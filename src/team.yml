@@ -29,6 +29,83 @@
     - email: vincent.guo@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/vincenteguo
   bio: MD/MBA candidate working on AI systems for healthcare. Previously Wharton, Columbia.
+- name: Ankita Reddy
+  role: VP, AI
+  headshot: public/images/headshots/reddya.jpg
+  contact:
+    - email: ankita.reddy@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/ankita-reddy-a111556a/
+  bio: MD/PhD candidate studying the social and cultural dimensions of AI implementation in large healthcare systems.
+- name: Ruhi Sayana
+  role: VP, AI
+  headshot: public/images/headshots/sayanar.jpg
+  contact:
+    - email: ruhi.sayana@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/ruhisayana/
+  bio: MD candidate working on AI for biomedical science, medical AI safety/interpretability. Previously CS (BS/MS) at Stanford, Quadrant Health.
+- name: Aditi Mukkara
+  role: VP, Careers and Mentorship
+  headshot: public/images/headshots/mukkaraa.jpeg
+  contact:
+    - email: aditi.mukkara@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/aditi-mukkara-904744229/
+  bio: MD candidate interested in exploring the intersection of healthcare and technology to advance access and patient care. Previously CS at CWRU.
+- name: Pierre Younes
+  role: VP, Careers and Mentorship
+  headshot: public/images/headshots/younesp.jpg
+  contact:
+    - email: pierre.younes@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/pierre-a-younes
+  bio: MD candidate interested in the development of neural augmentation technologies. Previous UMiami, Sylvester Comprehensive Cancer Center.
+- name: Chaitanya Vankireddy
+  role: VP, Conference
+  headshot: public/images/headshots/vankireddyc.jpg
+  contact:
+    - email: chaitanya.vankireddy@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/chaitanya-vankireddy-75656a129
+  bio: MD candidate interested in healthcare investment and health systems design. Previously Neuroscience at Penn (BA), MidCap Financial.
+- name: Evrim Efe Ozcan
+  role: VP, Conference
+  headshot: public/images/headshots/ozcane.JPG
+  contact:
+    - email: evrim.ozcan@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/evrim-ozcan-61312b1a6
+  bio: MD candidate building a medical device startup alongside research in surgical risk stratification.
+- name: Aaron Hsieh
+  role: VP, Curriculum
+  headshot: public/images/headshots/hsieha.jpeg
+  contact:
+    - email: aaron.hsieh@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/~aaronh/
+  bio: MD candidate working on medical AI applications, explainability, and safety. Previously Meta, Snap, and Bloomberg.
+- name: Freya Gulamali
+  role: VP, Curriculum
+  headshot: public/images/headshots/gulamaf.jpg
+  contact:
+    - email: freya.gulamali@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/freya-gulamali-381719190/
+  bio: MD candidate working on health AI risk prediction tools and related policy. Previously CS at Duke.
+- name: Yuri Choi
+  role: VP, Marketing
+  headshot: public/images/headshots/choiy.jpeg
+  contact:
+    - email: yuri.choi@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/yuri-choi-0b3854133
+  bio: MD candidate working on medical device and implant development and healthcare innovation. Previously Oliver Wyman.
+- name: Isabella Stuart
+  role: VP, Podcast
+  headshot: public/images/headshots/stuarti.jpeg
+  contact:
+    - email: isabella.stuart@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/isabella-stuart-03196b1b2
+  bio: MD candidate interested in developing sustainable innovations that align hospital incentives with improved patient outcomes and system efficiency.
+- name: William Hayes
+  role: VP, Podcast
+  headshot: public/images/headshots/hayesw.jpg
+  contact:
+    - email: hayeswi@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/william-e-hayes
+  bio: MD candidate and biomedical engineer focused on healthcare innovation at the intersection of medical devices and patient-centered clinical care.
 - name: Margaret Jankowski
   role: VP, R&D
   headshot: public/images/headshots/jankowskim.jpg
@@ -50,55 +127,6 @@
     - email: nina.nair@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/nina-nair-a25522284
   bio: MD candidate focused on medical device innovation and developing platforms for students to work on MedTech projects.
-- name: Yuri Choi
-  role: VP, Marketing
-  headshot: public/images/headshots/choiy.jpeg
-  contact:
-    - email: yuri.choi@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/yuri-choi-0b3854133
-  bio: MD candidate working on medical device and implant development and healthcare innovation. Previously Oliver Wyman.
-- name: Aaron Hsieh
-  role: VP, Curriculum
-  headshot: public/images/headshots/hsieha.jpeg
-  contact:
-    - email: aaron.hsieh@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/~aaronh/
-  bio: MD candidate working on medical AI applications, explainability, and safety. Previously Meta, Snap, and Bloomberg.
-- name: Freya Gulamali
-  role: VP, Curriculum
-  headshot: public/images/headshots/gulamaf.jpg
-  contact:
-    - email: freya.gulamali@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/freya-gulamali-381719190/
-  bio: MD candidate working on health AI risk prediction tools and related policy. Previously CS at Duke.
-- name: Ankita Reddy
-  role: VP, AI
-  headshot: public/images/headshots/reddya.jpg
-  contact:
-    - email: ankita.reddy@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/ankita-reddy-a111556a/
-  bio: MD/PhD candidate studying the social and cultural dimensions of AI implementation in large healthcare systems.
-- name: Ruhi Sayana
-  role: VP, AI
-  headshot: public/images/headshots/sayanar.jpg
-  contact:
-    - email: ruhi.sayana@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/ruhisayana/
-  bio: MD candidate working on AI for biomedical science, medical AI safety/interpretability. Previously CS (BS/MS) at Stanford, Quadrant Health.
-- name: Evrim Efe Ozcan
-  role: VP, Conference
-  headshot: public/images/headshots/ozcane.JPG
-  contact:
-    - email: evrim.ozcan@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/evrim-ozcan-61312b1a6
-  bio: MD candidate building a medical device startup alongside research in surgical risk stratification.
-- name: Chaitanya Vankireddy
-  role: VP, Conference
-  headshot: public/images/headshots/vankireddyc.jpg
-  contact:
-    - email: chaitanya.vankireddy@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/chaitanya-vankireddy-75656a129
-  bio: MD candidate interested in healthcare investment and health systems design. Previously Neuroscience at Penn (BA), MidCap Financial.
 - name: Christian Nguyen
   role: VP, SDoH Accelerator
   headshot: public/images/headshots/nguyenc.jpg
@@ -106,13 +134,6 @@
     - email: christian.nguyen@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/christian-nguyen-bme/
   bio: MD candidate working on clinical workflow optimization and clinical informatics. Previously University of Florida, Oak Street Health.
-- name: Shreya Mehta
-  role: VP, SDoH Accelerator
-  headshot: public/images/headshots/mehtas.jpeg
-  contact:
-    - email: mehtas@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/shreya-mehta-521a43219/
-  bio: MD candidate interested in the development of new therapeutics and healthcare innovations and the policymaking governing their equitable distribution.
 - name: Sarah Lalani
   role: VP, SDoH Accelerator
   headshot: public/images/headshots/lalanis.jpeg
@@ -120,6 +141,13 @@
     - email: Sarah.Lalani@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/sarah-lalani
   bio: MD candidate passionate about healthcare affordability and drug pricing policy.
+- name: Shreya Mehta
+  role: VP, SDoH Accelerator
+  headshot: public/images/headshots/mehtas.jpeg
+  contact:
+    - email: mehtas@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/shreya-mehta-521a43219/
+  bio: MD candidate interested in the development of new therapeutics and healthcare innovations and the policymaking governing their equitable distribution.
 - name: Eugene Cha
   role: VP, Ventures & Entrepreneurship
   headshot: public/images/headshots/chae.jpg
@@ -135,31 +163,3 @@
     - linkedin: https://www.linkedin.com/in/roboatory/
     - twitter: https://x.com/roboatory
   bio: MD/PhD candidate working on statistical and machine learning methods for multimodal biomedical data.
-- name: Pierre Younes
-  role: VP, Careers and Mentorship
-  headshot: public/images/headshots/younesp.jpg
-  contact:
-    - email: pierre.younes@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/pierre-a-younes
-  bio: MD candidate interested in the development of neural augmentation technologies. Previous UMiami, Sylvester Comprehensive Cancer Center.
-- name: Aditi Mukkara
-  role: VP, Careers and Mentorship
-  headshot: public/images/headshots/mukkaraa.jpeg
-  contact:
-    - email: aditi.mukkara@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/aditi-mukkara-904744229/
-  bio: MD candidate interested in exploring the intersection of healthcare and technology to advance access and patient care. Previously CS at CWRU.
-- name: William Hayes
-  role: VP, Podcast
-  headshot: public/images/headshots/hayesw.jpg
-  contact:
-    - email: hayeswi@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/william-e-hayes
-  bio: MD candidate and biomedical engineer focused on healthcare innovation at the intersection of medical devices and patient-centered clinical care.
-- name: Isabella Stuart
-  role: VP, Podcast
-  headshot: public/images/headshots/stuarti.jpeg
-  contact:
-    - email: isabella.stuart@pennmedicine.upenn.edu
-    - linkedin: https://www.linkedin.com/in/isabella-stuart-03196b1b2
-  bio: MD candidate interested in developing sustainable innovations that align hospital incentives with improved patient outcomes and system efficiency.
