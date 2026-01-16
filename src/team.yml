@@ -106,6 +106,14 @@
     - email: eugene.cha@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/eugene-cha
   bio: MD candidate focused on expanding psychiatric care accessibility through brain stimulator development, neuroimaging innovation, and VC investment.
+- name: Rohit Khurana
+  role: VP, Ventures & Entrepreneurship
+  headshot: public/images/headshots/khuranar.jpeg
+  contact:
+    - email: rohit.khurana@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/roboatory/
+    - twitter: https://x.com/roboatory
+  bio: MD/PhD candidate working on statistical and machine learning methods for multimodal biomedical data.
 - name: Pierre Younes
   role: VP, Careers and Mentorship
   headshot: public/images/headshots/younesp.jpg
