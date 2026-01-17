@@ -43,6 +43,13 @@
     - email: ruhi.sayana@pennmedicine.upenn.edu
     - linkedin: https://www.linkedin.com/in/ruhisayana/
   bio: MD candidate working on AI for biomedical science, medical AI safety/interpretability. Previously CS (BS/MS) at Stanford, Quadrant Health.
+- name: Aarush Sahni
+  role: VP, AI
+  headshot: public/images/headshots/sahnia.png
+  contact:
+    - email: aarush.sahni@pennmedicine.upenn.edu
+    - linkedin: https://www.linkedin.com/in/aarushsahni/
+  bio: MD Candidate working on AI clinical decision support for oncology. Previously BE at Penn.
 - name: Aditi Mukkara
   role: VP, Careers and Mentorship
   headshot: public/images/headshots/mukkaraa.jpeg
