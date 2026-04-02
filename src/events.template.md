@@ -14,4 +14,6 @@ Albert Opher, Founder of Penn’s Claude Builder Club, will lead an introductory
 
 This is a beginner-friendly workshop designed for students at all experience levels.
 
-Bonus: All attendees will receive free access to Claude Pro (a $20/month subscription) for 3 months, as well as free API credits. We highly encourage you to take advantage of this opportunity to learn, build, and continue developing your own tools beyond the session. If you plan to attend, please fill out this form ASAP to receive Claude Pro access. For the API question, please select “No” and follow the instructions. Let me know if you have any questions.
+Bonus: All attendees will receive free access to Claude Pro (a $20/month subscription) for 3 months, as well as free API credits. We highly encourage you to take advantage of this opportunity to learn, build, and continue developing your own tools beyond the session. If you plan to attend, please fill out the form (below) ASAP to receive Claude Pro access. For the API question, please select “No” and follow the instructions. Let me know if you have any questions.
+
+https://www.jotform.com/253566966596075
