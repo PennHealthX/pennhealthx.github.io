@@ -2,7 +2,7 @@ pyyaml
 flake8
 mypy
 markdown-it-py
-mdit-py-plugins
+mdit-py-emoji
 isort
 black
 watchdog

@@ -15,7 +15,7 @@ from typing import Any, Dict
 
 import yaml
 from markdown_it import MarkdownIt
-from mdit_py_plugins.emoji import emoji_plugin
+from mdit_py_emoji import emoji_plugin
 
 root = pathlib.Path(__file__).parent.resolve()
 dist_path = os.path.join(root, "dist")
