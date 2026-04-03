@@ -15,6 +15,7 @@ from typing import Any, Dict
 
 import yaml
 from markdown_it import MarkdownIt
+from mdit_py_plugins.emoji import emoji_plugin
 
 root = pathlib.Path(__file__).parent.resolve()
 dist_path = os.path.join(root, "dist")
@@ -62,7 +63,9 @@ def markdown_to_html(text: str) -> str:
     lines = text.split("\n")
     content = "\n".join(lines[end + 1:])
 
-    md = MarkdownIt("commonmark", {"breaks": True, "html": True})
+    md = MarkdownIt("commonmark", {"breaks": True, "html": True}).use(
+        emoji_plugin
+    )
     md = md.enable("table")
     return md.render(content)
 
