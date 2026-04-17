@@ -124,7 +124,7 @@ We financially support PSOM medical students to pursue summer opportunities in h
 
 Importantly, you cannot have equity in the organization at the time of application.
 
-Direct any questions to our [VPs: Entrepreneurship/Ventures](/team).
+Direct any questions to our [VPs: Careers and Mentorship](/team).
 </details>
 
 <!-- NOTE: (Advanced) You can also include custom Javascript in Markdown files. -->
