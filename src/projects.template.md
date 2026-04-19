@@ -28,16 +28,18 @@ Our SDoH Accelerator program provides early-stage startups and organizations wor
 </details>
 
 <details id="ventures">
-<summary><h2>&ensp;&#127911; PennHealthX Venture Fund</h2></summary>
+<summary><h2>&ensp;&#127911; PennHealthX Innovation Fund</h2></summary>
 
-We offer **non-dilutive venture funding** for PSOM students developing innovative ideas in healthcare. The HealthX Venture Fund is a student-run fund that financially backs Penn students working to fill a need in our healthcare system. Awarded teams retain complete ownership of their idea — no equity or loan is involved. Teams can receive up to **$15,000** in funding to develop their ideas. Applications are accepted on a rolling basis.
+We support healthcare and life sciences ventures led by Penn Medicine and other UPenn graduate/undergraduate students, spanning medical technology, biotechnology, digital health, and clinical solutions. Three award tiers are available for Summer 2026:
+
+:bulb: Discovery Award ($500+): for idea-stage ventures still developing their solution
+:gear: Implementation Award ($2,500+): for ventures with validated assumptions and an minimum viable product (MVP)
+:chart_with_upwards_trend: Growth Award ($5,000+): for revenue-generating ventures ready to scale
 
 **How It Works.** &ensp; There are two steps to our application:
 
-  1. Submit an application [here](https://forms.gle/YEd49euCRHyYxc4bA).
-  2. Pitch your idea to the PennHealthX Venture Fund's board members and advisors.
-
-Awarded grants can be up to $15,000, although typically range between $1,000-2,000.
+  1. Submit an application [here](https://docs.google.com/forms/d/e/1FAIpQLSeRXkerz9xs--pXJCaBiqCzKoya46Pbjt-g9Cz0QB05wXhJMA/viewform) by Friday, May 1st, 2026.
+  3. Pitch your idea to the PennHealthX Venture Fund's board members and advisors on Monday, May 11th, 2026 2-5pm.
 
 **Eligibility.** &ensp; In order to be eligible for venture funding, your team must...
 
@@ -45,6 +47,10 @@ Awarded grants can be up to $15,000, although typically range between $1,000-2,0
   2. include as an integral member either (A) a PSOM MD candidate; (B) a recent PSOM MD graduate (less than 2 years removed from terminal degree); or (C) a Penn medical trainee.
 
 Priority will be given to ventures from current PSOM students. Applications for follow-on funding will be considered, although must demonstrate clear progress from the initial grant.
+
+**Questions?.** Contact our Venture Fund Board Members:
+:email: Eugene Cha: eugene.cha@pennmedicine.upenn.edu
+:email: Rohit Khurana: rohit.khurana@pennmedicine.upenn.edu
 
 **Previously Funded Ventures.**
 
