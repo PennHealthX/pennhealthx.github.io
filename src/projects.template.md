@@ -48,7 +48,7 @@ We support healthcare and life sciences ventures led by Penn Medicine and other 
 
 Priority will be given to ventures from current PSOM students. Applications for follow-on funding will be considered, although must demonstrate clear progress from the initial grant.
 
-**Questions?.** Contact our Venture Fund Board Members:
+**Questions?** &ensp; Contact our Venture Fund Board Members:
 :email: Eugene Cha: eugene.cha@pennmedicine.upenn.edu
 :email: Rohit Khurana: rohit.khurana@pennmedicine.upenn.edu
 
