@@ -119,14 +119,14 @@ Contact our [VPs: Curriculum](/team) with any questions.
 <details id="internships">
 <summary><h2>&ensp;&#128391; Internship Awards</h2></summary>
 
-We financially support PSOM medical students to pursue summer opportunities in healthcare management, entrepreneurship, and technology. We are especially interested in supporting projects that students would not otherwise encounter or be able to fund, such as unpaid or underpaid summer internships at startup companies. Recipients are eligible for up to $1,500 in funding and the chance to present their work in the fall at the annual [PennHealthX conference](/conference).
+We provide funding for PSOM students pursuing summer opportunities in healthcare management, entrepreneurship, or technology. The goal of the grant is to support experiences that students might not otherwise be able to pursue financially, such as unpaid or underpaid internships at startups or similar organizations. PennHealthX will fund up to 5 students, with awards of up to $3,000. Recipients will also present their work at the annual [PennHealthX conference](/conference) in the fall.
 
-**How to Apply.** &ensp; [Email us](mailto:pennhealthx@gmail.com) with the following:
+**Eligibility.** &ensp;
+  - You must be interning for an established employer (not as a founder).
+  - The position must be unpaid or low-paid (under $500 for the entire summer).
+  - The internship must be full-time (≥35 hours/week) for at least 7 weeks.
 
-  - a description of the project, including your role, time commitment, and what you hope to gain from the internship (750 words).
-  - a brief statement of why current funding for this project is insufficient (100 words).
-  - your resume.
-  - proof of your anticipated involvement with the organization (CC'ing us on an email thread is sufficient).
+**How to Apply.** &ensp; [Apply here](https://docs.google.com/forms/d/e/1FAIpQLSe6qFGU48lcFWJRvbTQyJYCRZxsFZQrcTZZQRcDypyGO2YXbg/viewform) by Sunday, 5/3, 11:59PM
 
 Importantly, you cannot have equity in the organization at the time of application.
 
