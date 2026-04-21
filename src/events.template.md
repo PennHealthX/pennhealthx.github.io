@@ -11,19 +11,3 @@ Albert Opher, Founder of Penn’s Claude Builder Club, will lead an introductory
 This is a beginner-friendly workshop designed for students at all experience levels.
 
 Bonus: All attendees will receive free access to Claude Pro (a $20/month subscription) for 3 months, as well as free API credits. We highly encourage you to take advantage of this opportunity to learn, build, and continue developing your own tools beyond the session. If you plan to attend, please fill out [this form ASAP](https://www.jotform.com/253566966596075) to receive Claude Pro access. For the API question, please select “No” and follow the instructions. Let me know if you have any questions.
-
-:apple: **NYC Trek | :round_pushpin: Friday, 5/1 10am**
-
-We are hosting a free, one-day NYC trek to connect students with leaders working at the intersection of medicine, venture capital, and startups, and applications are now open.
-
-If you’re curious about careers beyond the traditional clinical path (or how medicine and business actually intersect in the real world), this is a great chance to see it up close while spending the day in NYC for free.
-
-What’s included:
-- Round-trip Amtrak (fully covered) - depart ~10 AM, return late evening
-- 3 company visits with Penn-affiliated leaders:
-  - Aegis Ventures - Mohona Paul
-  - Rover Labs - Mark Fasciano
-  - K Health - Ran Shaul
-- Meals subsidized (you may cover a small portion depending on your order)
-
-Submit your application [here](https://docs.google.com/forms/d/e/1FAIpQLSfIhWPODmGfvt6BLh1twGVtatvuDCNUSGYrHXa6dwouOetFHA/viewform) by Monday, 4/20. 
