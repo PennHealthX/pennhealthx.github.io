@@ -39,7 +39,7 @@ We support healthcare and life sciences ventures led by Penn Medicine and other 
 **How It Works.** &ensp; There are two steps to our application:
 
   1. Submit an application [here](https://docs.google.com/forms/d/e/1FAIpQLSeRXkerz9xs--pXJCaBiqCzKoya46Pbjt-g9Cz0QB05wXhJMA/viewform) by Friday, May 1st, 2026.
-  3. Pitch your idea to the PennHealthX Venture Fund's board members and advisors on Monday, May 11th, 2026 2-5pm.
+  3. Pitch your idea to the PennHealthX Venture Fund's board members and advisors on Monday, May 11th, 2026 2-5pm. (register on our events page)
 
 **Eligibility.** &ensp; In order to be eligible for venture funding, your team must...
 
