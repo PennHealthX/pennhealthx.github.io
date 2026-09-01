@@ -1,0 +1,129 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px auto 70px auto;
+}
+
+.team-card {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+  opacity: 0.9;
+}
+
+.team-card:hover .team-image {
+  filter: grayscale(0%);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, var(--BACKGROUND-COLOR) 0%, transparent 100%);
+  padding: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.team-card:hover .image-overlay {
+  opacity: 0;
+}
+
+.name {
+  font-size: var(--MEDIUM);
+  font-weight: var(--NORMAL);
+  color: var(--FONT-COLOR);
+  margin: 0 0 2px 0;
+}
+
+.role {
+  font-size: var(--SMALL);
+  color: var(--RED);
+  font-weight: var(--NORMAL);
+  margin: 0;
+}
+
+.hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 15, 0.8);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.team-card:hover .hover-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.bio-text {
+  color: var(--FONT-COLOR);
+  line-height: 1.5;
+  margin: 25px 0 30px 0;
+  font-size: var(--SMALL);
+}
+
+.social-btn {
+  flex: 1;
+  background-color: color-mix(in srgb, var(--FONT-COLOR), transparent 70%);
+  border: 1px solid color-mix(in srgb, var(--FONT-COLOR), transparent 50%);
+  color: var(--FONT-COLOR);
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: var(--MEDIUM);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-btn:hover {
+  background-color: color-mix(in srgb, var(--RED), transparent 40%);
+  border: 1px solid var(--FONT-COLOR);
+  color: var(--FONT-COLOR);
+  transform: translateY(-3px);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 0.9fr;
+  }
+}
