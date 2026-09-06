@@ -24,7 +24,7 @@ Our SDoH Accelerator program provides early-stage startups and organizations wor
 <!-- NOTE: Bolded text should be surrounded by double asterisks (e.g., **text to bold**). Italicized text should be surrounded by single asterisks (e.g., *text to italicize*). -->
 **Interested startups** prepare a high-level work plan outlining key deliverables that a PSOM student-consultant will assist with. Startups should then schedule a meeting with our [VPs: SDoH Accelerator](/team). For additional sources of support and funding, see our list of [Penn Resources for Entrepreneurs](https://docs.google.com/document/d/1JmDZ6B-wpR8y8aF10vUTB0l-sJ8tXkR0ZEnI_RIwx7c/edit).
 
-**Interested PSOM student-consultants** should join the PennHealthX listserv to stay up-to-date on new SDoH Accelerator opportunities. Contact our [VPs: SDoH Accelerator](/team) or [email us](mailto:pennhealthx@gmail.com) for more information. Applications are accepted on a rolling basis.
+**Interested PSOM student-consultants** should join the PennHealthX listserv to stay up-to-date on new SDoH Accelerator opportunities. Contact our [VPs: SDoH Accelerator](/team) or [email us](mailto:info@pennhealthx.com) for more information. Applications are accepted on a rolling basis.
 </details>
 
 <details id="ventures">
