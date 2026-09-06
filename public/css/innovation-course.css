@@ -755,6 +755,20 @@
   line-height: 1.35;
 }
 
+/* Compact variant for short, single-line choices (e.g. training year). */
+.signup-options-compact {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.signup-options-compact .signup-option {
+  align-items: center;
+  padding: 12px 14px;
+}
+
+.signup-options-compact .signup-option input[type="radio"] {
+  margin-top: 0;
+}
+
 .option-title {
   display: block;
   font-size: var(--SMALL);
@@ -977,6 +991,10 @@
 
   .signup-options {
     grid-template-columns: 1fr;
+  }
+
+  .signup-options-compact {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .signup-submit {

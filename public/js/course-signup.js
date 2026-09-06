@@ -21,6 +21,7 @@
  *     &entry.1836183358=John+Smith
  *     &entry.324405984=smithj@pennmedicine.upenn.edu
  *     &entry.747874515=Yes
+ *     &entry.1253580093=MS1
  * If the Google Form is rebuilt, regenerate a pre-filled link and update them.
  *
  * Licensed under the MIT License. Copyright PennHealthX 2026.
@@ -36,7 +37,8 @@
   var ENTRY_IDS = {
     name: "entry.1836183358",
     email: "entry.324405984",
-    attending: "entry.747874515"
+    attending: "entry.747874515",
+    training_year: "entry.1253580093"
   };
 
   var IFRAME_NAME = "gform-iframe";
