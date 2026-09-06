@@ -1,7 +1,7 @@
 # PennHealthX Website
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
-[![CONTACT](https://img.shields.io/badge/contact-pennhealthx%40gmail.com-blue)](mailto:pennhealthx@gmail.com)
+[![CONTACT](https://img.shields.io/badge/contact-info%40pennhealthx.com-blue)](mailto:info@pennhealthx.com)
 [![CONTACT](https://img.shields.io/badge/contact-michael.yao%40pennmedicine.upenn.edu-blue)](mailto:michael.yao@pennmedicine.upenn.edu)
 
 This repository contains the source code for the PennHealthX website. We have made significant efforts to make adding new website pages and editing existing ones as easy as possible.
@@ -119,7 +119,7 @@ You can then open the pull request on [GitHub](https://github.com/PennHealthX/pe
 
 Questions and comments are welcome. Suggestions can be submitted through GitHub issues. Contact information is linked below.
 
-[PennHealthX Team](mailto:pennhealthx@gmail.com)
+[PennHealthX Team](mailto:info@pennhealthx.com)
 
 [Michael Yao](mailto:michael.yao@pennmedicine.upenn.edu)
 
