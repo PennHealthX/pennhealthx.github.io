@@ -4,7 +4,7 @@ title: PennHealthX Upcoming Events
 
 # Upcoming Events
 
-**Innovation & Entrepreneurship in Medicine Series**
+## Innovation & Entrepreneurship in Medicine Series
 
 Are you interested in healthcare innovation, entrepreneurship, medical devices, startups, or learning how clinical ideas become real-world solutions? This fall, PennHealthX is offering Innovation & Entrepreneurship in Medicine, a new seminar series designed to introduce medical students to the process of identifying clinical problems, developing innovative solutions, and translating those ideas into practice. Attending this seminar series counts towards completion of your HMET certificate!
 
