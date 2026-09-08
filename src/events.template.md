@@ -26,7 +26,7 @@ Sessions are highly interactive and case-based, with students working in teams t
 
 :point_right: **Registration:** [here](https://forms.gle/fGdRMDFcsmbJEcpL8)
 
-## Lunch Talk with Dr. Stacey Kassutto, Dr. Michael Horst, and Dr. Danielle Mowery :pizza:
+## Responsible AI for Research Lunch Talk :pizza:
 
 This lunch talk will focus on:
 - How to responsibly use AI for medical research
