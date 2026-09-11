@@ -1,0 +1,1016 @@
+/*
+ * Styles for the Innovation & Entrepreneurship course page
+ * (src/innovation-course.template.html). Everything is scoped under `.course`
+ * so nothing here leaks into the shared header or footer.
+ *
+ * Licensed under the MIT License. Copyright PennHealthX 2026.
+ */
+
+.course {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+}
+
+.course *,
+.course *::before,
+.course *::after {
+  box-sizing: border-box;
+}
+
+.course section {
+  padding: 80px 0;
+  border-top: 1px solid var(--FADED-COLOR);
+}
+
+.course section:first-child {
+  border-top: none;
+  padding-top: 20px;
+}
+
+.course h2 {
+  color: var(--FONT-COLOR);
+  font-size: var(--X-LARGE);
+  font-weight: var(--NORMAL);
+  line-height: 1.2;
+  margin: 0 0 15px;
+}
+
+.course h3,
+.course h4 {
+  color: var(--FONT-COLOR);
+}
+
+.course-eyebrow {
+  color: var(--RED);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: var(--X-SMALL);
+  font-weight: var(--THICK);
+  margin: 0 0 14px;
+}
+
+.course-section-head {
+  margin-bottom: 45px;
+}
+
+.course-section-lead {
+  font-size: var(--MEDIUM);
+  font-weight: var(--THIN);
+  opacity: 0.8;
+  line-height: 1.5;
+  max-width: 720px;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Hero                                                                */
+/* ------------------------------------------------------------------ */
+
+.course-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 60px;
+  align-items: center;
+  min-height: 560px;
+}
+
+.course-hero h1 {
+  font-size: clamp(30px, 4.2vw, 50px);
+  font-weight: var(--NORMAL);
+  line-height: 1.18;
+  margin: 0 0 25px;
+}
+
+.course-hero .lead {
+  font-size: var(--MEDIUM);
+  font-weight: var(--THIN);
+  opacity: 0.85;
+  line-height: 1.55;
+  max-width: 640px;
+  margin: 0 0 35px;
+}
+
+.course-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px 30px;
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.course-meta li {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.course-meta .label {
+  display: block;
+  font-size: var(--X-SMALL);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.55;
+  margin-bottom: 5px;
+}
+
+.course-meta .value {
+  display: block;
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+}
+
+.course-meta-note {
+  font-size: var(--X-SMALL);
+  opacity: 0.6;
+  margin: 0 0 35px;
+}
+
+.course-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background: var(--RED);
+  color: #ffffff;
+  border-color: var(--RED);
+}
+
+.btn-primary:hover {
+  background: #bf302b;
+  border-color: #bf302b;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  color: var(--FONT-COLOR);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  border-color: var(--FONT-COLOR);
+  transform: translateY(-2px);
+}
+
+/* Hero visual: a floating mini-timeline that previews the schedule. */
+.course-hero-visual {
+  position: relative;
+  padding: 10px 0 10px 34px;
+  justify-self: center;
+  min-width: 260px;
+}
+
+.course-hero-visual::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 18px;
+  bottom: 18px;
+  border-left: 1px dashed rgba(255, 255, 255, 0.25);
+}
+
+.course-hero-visual .node {
+  position: relative;
+  margin: 0 0 30px;
+  font-size: var(--SMALL);
+  font-weight: var(--THIN);
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.course-hero-visual .node:last-child {
+  margin-bottom: 0;
+}
+
+.course-hero-visual .node::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--BACKGROUND-COLOR);
+  border: 2px solid var(--RED);
+  transform: translateY(-50%);
+  box-shadow: 0 0 16px rgba(216, 57, 51, 0.45);
+}
+
+.course-hero-visual .node-final::before {
+  background: var(--RED);
+}
+
+.course-hero-visual .node-week {
+  display: block;
+  font-size: var(--X-SMALL);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.5;
+  margin-bottom: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Stats                                                               */
+/* ------------------------------------------------------------------ */
+
+.course-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px 70px;
+  padding: 50px 0 !important;
+}
+
+.course-stats .stat-item {
+  text-align: left;
+  min-width: max-content;
+}
+
+.course-stats .stat-value {
+  font-size: var(--X-LARGE);
+  font-weight: var(--NORMAL);
+  margin-bottom: 4px;
+}
+
+.course-stats .stat-label {
+  opacity: 0.75;
+  font-size: 14px;
+}
+
+/* ------------------------------------------------------------------ */
+/* How it works                                                        */
+/* ------------------------------------------------------------------ */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  border-top: 2px solid var(--RED);
+  padding-top: 22px;
+}
+
+.step-range {
+  display: block;
+  font-size: var(--X-SMALL);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.55;
+}
+
+.step h3 {
+  font-size: var(--LARGE);
+  font-weight: var(--NORMAL);
+  margin: 10px 0 12px;
+}
+
+.step p {
+  font-size: var(--SMALL);
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Schedule timeline                                                   */
+/* ------------------------------------------------------------------ */
+
+.schedule {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.schedule::before {
+  content: "";
+  position: absolute;
+  left: 165px;
+  top: 12px;
+  bottom: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 0 70px;
+  position: relative;
+  margin: 0 0 22px;
+}
+
+.schedule-item::before {
+  content: "";
+  position: absolute;
+  left: 159px;
+  top: 24px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--BACKGROUND-COLOR);
+  border: 2px solid var(--RED);
+  z-index: 1;
+}
+
+.schedule-item.has-speaker::before,
+.schedule-item.is-final::before {
+  background: var(--RED);
+  box-shadow: 0 0 16px rgba(216, 57, 51, 0.5);
+}
+
+.schedule-date {
+  text-align: right;
+  padding-top: 20px;
+  line-height: 1.3;
+}
+
+.schedule-date .day {
+  display: block;
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+}
+
+.schedule-date .time {
+  display: block;
+  font-size: var(--X-SMALL);
+  opacity: 0.55;
+  margin-top: 3px;
+}
+
+/*
+ * The shared stylesheet gives every <details> `transition: all` and
+ * `overflow: hidden`, and /public/js/animate_details.js animates its height
+ * between the <summary> height and the full scroll height. Keeping the card
+ * itself at content-box with zero padding means those measurements line up
+ * exactly with the border drawn here.
+ */
+.schedule-card {
+  box-sizing: content-box;
+  padding: 0;
+  border: 1px solid var(--FADED-COLOR);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.schedule-card:hover,
+.schedule-card[open] {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.schedule-card[open] {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.schedule-card summary {
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "head toggle"
+    "title toggle";
+  align-items: center;
+  column-gap: 18px;
+  padding: 20px 24px;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.schedule-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.schedule-card summary::marker {
+  content: "";
+}
+
+.schedule-head {
+  grid-area: head;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-bottom: 8px;
+}
+
+.schedule-week {
+  font-size: var(--X-SMALL);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.schedule-tag {
+  font-size: var(--X-SMALL);
+  padding: 4px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(216, 57, 51, 0.55);
+  color: var(--RED);
+  background: rgba(216, 57, 51, 0.08);
+  white-space: nowrap;
+}
+
+.schedule-title {
+  grid-area: title;
+  font-size: var(--MEDIUM);
+  font-weight: var(--NORMAL);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.schedule-toggle {
+  grid-area: toggle;
+  opacity: 0.55;
+  font-size: 14px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.schedule-card summary:hover .schedule-toggle {
+  opacity: 1;
+}
+
+.schedule-card[open] .schedule-toggle {
+  transform: rotate(180deg);
+}
+
+.schedule-body {
+  padding: 0 24px 24px;
+  border-top: 1px solid var(--FADED-COLOR);
+}
+
+.schedule-body h4 {
+  font-size: var(--X-SMALL);
+  font-weight: var(--THICK);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+  margin: 22px 0 8px;
+}
+
+.schedule-body ol,
+.schedule-body ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.schedule-body li,
+.schedule-body p {
+  font-size: var(--SMALL);
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+.schedule-body p {
+  margin: 0 0 6px;
+}
+
+.schedule-speaker-link {
+  margin-top: 16px !important;
+}
+
+.schedule-speaker-link a {
+  text-decoration: none;
+  font-weight: var(--NORMAL);
+}
+
+.schedule-speaker-link a:hover {
+  text-decoration: underline;
+}
+
+/* Non-collapsible weeks (office hours, pitch night). */
+.schedule-card.static {
+  padding: 20px 24px;
+}
+
+.schedule-card.static .schedule-head {
+  margin-bottom: 8px;
+}
+
+.schedule-card.static .schedule-title {
+  margin-bottom: 8px;
+}
+
+.schedule-desc {
+  font-size: var(--SMALL);
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.schedule-card.final {
+  border-color: rgba(216, 57, 51, 0.6);
+  background: rgba(216, 57, 51, 0.06);
+}
+
+/* ------------------------------------------------------------------ */
+/* People (speakers and course leaders)                                */
+/* ------------------------------------------------------------------ */
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.leaders-grid {
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid var(--FADED-COLOR);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  scroll-margin-top: 30px;
+}
+
+.person-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.person-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.person-card:hover .person-photo {
+  filter: grayscale(0%);
+  border-color: var(--RED);
+}
+
+.person-name {
+  font-size: var(--LARGE);
+  font-weight: var(--NORMAL);
+  line-height: 1.25;
+  margin: 22px 0 6px;
+}
+
+.person-role {
+  color: var(--RED);
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+.person-session {
+  font-size: var(--X-SMALL);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.55;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.person-bio {
+  font-size: var(--SMALL);
+  line-height: 1.65;
+  opacity: 0.85;
+  margin: 0 0 22px;
+  flex: 1;
+}
+
+.person-links {
+  display: flex;
+  gap: 10px;
+}
+
+.person-links a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--FONT-COLOR);
+  font-size: var(--SMALL);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.person-links a:hover {
+  border-color: var(--RED);
+  color: var(--RED);
+  transform: translateY(-2px);
+}
+
+/* Horizontal variant used for course leaders. */
+.person-card.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.person-card.horizontal .person-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.person-card.horizontal .person-name {
+  margin-top: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sign-up form                                                        */
+/* ------------------------------------------------------------------ */
+
+.signup-form {
+  max-width: 620px;
+}
+
+.signup-fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.signup-field {
+  margin-bottom: 24px;
+}
+
+.signup-field > label,
+.signup-choice > legend {
+  display: block;
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+  margin-bottom: 9px;
+  padding: 0;
+}
+
+.signup-field input[type="text"],
+.signup-field input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+  font: inherit;
+  font-size: var(--SMALL);
+  color: var(--FONT-COLOR);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.signup-field input::placeholder {
+  color: rgba(240, 240, 240, 0.35);
+}
+
+.signup-field input:focus {
+  border-color: var(--RED);
+  box-shadow: 0 0 0 3px rgba(216, 57, 51, 0.25);
+}
+
+.signup-choice {
+  border: 0;
+  padding: 0;
+  margin: 0 0 28px;
+  min-width: 0;
+}
+
+.signup-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.signup-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.signup-option:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.signup-option:has(input:checked) {
+  border-color: var(--RED);
+  background: rgba(216, 57, 51, 0.08);
+}
+
+.signup-option:has(input:focus-visible) {
+  box-shadow: 0 0 0 3px rgba(216, 57, 51, 0.25);
+}
+
+.signup-option input[type="radio"] {
+  accent-color: var(--RED);
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.option-text {
+  display: block;
+  line-height: 1.35;
+}
+
+/* Compact variant for short, single-line choices (e.g. training year). */
+.signup-options-compact {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.signup-options-compact .signup-option {
+  align-items: center;
+  padding: 12px 14px;
+}
+
+.signup-options-compact .signup-option input[type="radio"] {
+  margin-top: 0;
+}
+
+.option-title {
+  display: block;
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+}
+
+.option-desc {
+  display: block;
+  font-size: var(--X-SMALL);
+  opacity: 0.65;
+  margin-top: 3px;
+}
+
+/* Honeypot: parked far off-screen rather than display:none so that bots
+   which skip hidden inputs still see (and fill) it. */
+.signup-honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.signup-submit {
+  display: inline-block;
+  background: var(--RED);
+  color: #ffffff;
+  border: 1px solid var(--RED);
+  border-radius: 999px;
+  padding: 14px 34px;
+  font: inherit;
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.signup-submit:hover {
+  background: #bf302b;
+  border-color: #bf302b;
+  transform: translateY(-2px);
+}
+
+.signup-submit:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(216, 57, 51, 0.35);
+}
+
+.signup-submit:disabled {
+  opacity: 0.55;
+  cursor: default;
+  transform: none;
+}
+
+.signup-fields:disabled input,
+.signup-fields:disabled .signup-option {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.signup-status {
+  margin: 22px 0 0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: var(--SMALL);
+  font-weight: var(--NORMAL);
+  line-height: 1.5;
+}
+
+.signup-status.success {
+  background: rgba(80, 161, 79, 0.14);
+  border: 1px solid rgba(80, 161, 79, 0.6);
+  color: #9fdc9e;
+}
+
+.signup-status.error {
+  background: rgba(216, 57, 51, 0.12);
+  border: 1px solid rgba(216, 57, 51, 0.6);
+  color: #f3a7a3;
+}
+
+.signup-note {
+  font-size: var(--X-SMALL);
+  opacity: 0.55;
+  margin: 16px 0 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 1024px) {
+  .course section {
+    padding: 60px 0;
+  }
+
+  .course-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    min-height: 0;
+  }
+
+  .course-hero-visual {
+    display: none;
+  }
+
+  .schedule-item {
+    gap: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course {
+    padding: 0 12px 10px;
+  }
+
+  .course section {
+    padding: 50px 0;
+  }
+
+  .course h2 {
+    font-size: var(--LARGE);
+  }
+
+  .course-section-head {
+    margin-bottom: 30px;
+  }
+
+  .course-section-lead,
+  .course-hero .lead {
+    font-size: var(--SMALL);
+  }
+
+  .course-hero h1 {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .course-cta .btn-primary,
+  .course-cta .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .course-stats {
+    gap: 24px 40px;
+    padding: 40px 0 !important;
+  }
+
+  .course-stats .stat-value {
+    font-size: var(--LARGE);
+  }
+
+  /* Stack the timeline: date above card, slim rail on the left. */
+  .schedule::before {
+    left: 6px;
+  }
+
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: 28px;
+    margin-bottom: 26px;
+  }
+
+  .schedule-item::before {
+    left: 0;
+    top: 4px;
+  }
+
+  .schedule-date {
+    text-align: left;
+    padding: 0 0 10px;
+  }
+
+  .schedule-date .day,
+  .schedule-date .time {
+    display: inline;
+  }
+
+  .schedule-date .time::before {
+    content: "\00b7";
+    margin: 0 6px;
+  }
+
+  .schedule-card summary,
+  .schedule-card.static {
+    padding: 16px 18px;
+  }
+
+  .schedule-body {
+    padding: 0 18px 18px;
+  }
+
+  .schedule-title {
+    font-size: var(--SMALL);
+  }
+
+  .person-card {
+    padding: 24px;
+  }
+
+  .person-card.horizontal {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .person-card.horizontal .person-name {
+    margin-top: 22px;
+  }
+
+  .person-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .person-name {
+    font-size: var(--MEDIUM);
+  }
+
+  .signup-options {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-options-compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signup-submit {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-hero-visual .node {
+    animation: none;
+  }
+
+  .course .btn-primary,
+  .course .btn-secondary,
+  .course .signup-submit,
+  .course .person-links a {
+    transition: none;
+  }
+}
