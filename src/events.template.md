@@ -47,3 +47,16 @@ A little bit about our speakers:
 :round_pushpin: **Location:** Law Auditorium
 
 :point_right: **Registration:** [here](https://docs.google.com/forms/d/e/1FAIpQLSdyKGVsIEzYLO6w8OkljjM-n3Szz0hzJ2koGGmOZdaTBQh8LA/viewform?usp=send_form)
+
+## Immunology Club x PennHealthX Lunch Talk with Dr. Jeffrey Ishizuka :pizza:
+
+Translational Immunology Learners (TILs), aka the Immunology Club, is partnering with PennHealthX to give you a lunch talk with Dr. Jeffrey Ishizuka, discussing translating discoveries about the tumor microenvironment into novel cancer immunotherapies. 
+
+Dr. Jeffrey Ishizuka MD, DPhil - Dr. Ishizuka is an Associate Professor of Internal Medicine (Medical Oncology & Hematology) at the Yale School of Medicine. He completed his DPhil in immunology at Oxford and the NIH. Following his research training, he completed his MD at Harvard Medical School, internal medicine residency at the Brigham and Women's Hospital, and Medical Oncology Fellowship at Dana-Farber Cancer Institute.
+He has received numerous honors, including the Rhodes Scholarship and the Young Physician-Scientist Award from The American Society for Clinical Investigation. His laboratory studies the tumor-immune microenvironment and seeks to uncover novel approaches by which inflammation can be manipulated to improve cancer immunotherapies. One project that he will discuss is the development of a therapeutic mRNA vaccine for virally driven Merkel cell carcinoma. Dr. Ishizuka leads CurIOS Therapeutics, a biotech company focused on advancing novel mRNA therapies to target virally driven cancers, most notably Merkel cell carcinoma.
+
+:date: **Date:** Tuesday, 9/15, 12-1PM
+
+:round_pushpin: **Location:** 506E/W
+
+:point_right: **Registration:** [here](https://docs.google.com/forms/d/e/1FAIpQLSerzbs-ND1QPmTquifNdV21DBEUHDkLMlpYwLepZtu6FQzwzw/viewform)
