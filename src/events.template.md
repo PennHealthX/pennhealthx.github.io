@@ -28,4 +28,5 @@ PennHealthX is excited to invite you to a **lunch talk** with Dr. Evan Rieder wh
 Lunch (Don Barriga) will be provided!
 
 📍Location: 511
+
 📆 Date: Tuesday, 9/29 at 12-1pm
