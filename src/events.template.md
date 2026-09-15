@@ -19,3 +19,13 @@ Across 12 weekly sessions, you’ll learn about:
 - Lessons and experiences from physician entrepreneurs
 
 Sessions are highly interactive and case-based, with students working in teams throughout the series to develop a healthcare innovation and ultimately pitch their idea to win prizes! **Everyone can participate! No prior experience in entrepreneurship, business, or engineering is required. Dinner or snacks provided at every session.** Whether you already have an idea for a medical innovation or are simply curious about entrepreneurship, this is an opportunity to learn from experts, explore the entrepreneurial process, and get hands-on experience developing a healthcare innovation.
+
+## Starting a Private Practice in Dermatology with Dr. Evan Rieder 🍕
+PennHealthX is excited to invite you to a **lunch talk** with Dr. Evan Rieder who will share his journey **transitioning from academic medicine to opening his very own private practice dermatology clinic in NYC**.
+
+**Evan Rieder, MD** is a Perelman School of Medicine alumni and is one of three physicians to be dual board-certified in psychiatry and dermatology. He completed his residency at NYU and was a full-time faculty member for seven years before moving to private practice. Two years ago, he opened his very own clinic based in Tribeca and is eager to share his journey of starting his business. Today, he still utilizes his training in psychiatry and integrates it into his daily practice as a dermatologist.
+
+Lunch (Don Barriga) will be provided!
+
+📍Location: 511
+📆 Date: Tuesday, 9/29 at 12-1pm
