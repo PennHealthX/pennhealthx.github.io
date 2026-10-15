@@ -22,7 +22,7 @@ Sessions are highly interactive and case-based, with students working in teams t
 
 ## Physician Contract Negotiations Lunch Talk :page_facing_up:
 
-PennHealthX is bringing back our negotiating physician contracts event, a critical skill for every future physician! Join us on Monday, October 26th from 1:00 to 2:00 PM for a discussion with **Emily Ast**, JD, founder of AST Physician Contracts. Emily has reviewed and negotiated thousands of physician employment agreements across specialties, and she will walk through contract basics you can start learning now, such as employment models, compensation, and non-competes, and how to prepare for negotiating your first job. Food will be provided!
+PennHealthX is bringing back our negotiating physician contracts event, a critical skill for every future physician! Join us on Monday, October 26th from 1:00 to 2:00 PM for a discussion with **Emily Ast, JD** (founder of AST Physician Contracts). Emily has reviewed and negotiated thousands of physician employment agreements across specialties, and she will walk through contract basics you can start learning now, such as employment models, compensation, and non-competes, and how to prepare for negotiating your first job. Food will be provided!
 
 **📍 Location:** JMEC 505 EW
 
