@@ -19,3 +19,13 @@ Across 12 weekly sessions, you’ll learn about:
 - Lessons and experiences from physician entrepreneurs
 
 Sessions are highly interactive and case-based, with students working in teams throughout the series to develop a healthcare innovation and ultimately pitch their idea to win prizes! Everyone can participate! No prior experience in entrepreneurship, business, or engineering is required. Dinner or snacks provided at every session. Whether you already have an idea for a medical innovation or are simply curious about entrepreneurship, this is an opportunity to learn from experts, explore the entrepreneurial process, and get hands-on experience developing a healthcare innovation.
+
+## Physician Contract Negotiations Lunch Talk :page_facing_up:
+
+PennHealthX is bringing back our negotiating physician contracts event, a critical skill for every future physician! Join us on Monday, October 26th from 1:00 to 2:00 PM for a discussion with **Emily Ast**, JD, founder of AST Physician Contracts. Emily has reviewed and negotiated thousands of physician employment agreements across specialties, and she will walk through contract basics you can start learning now, such as employment models, compensation, and non-competes, and how to prepare for negotiating your first job. Food will be provided!
+
+📍 Location: JMEC 505 EW
+
+📆 Monday, 10/26 @1-2pm
+
+👉 Register: [here](https://docs.google.com/forms/d/e/1FAIpQLSexPO6nYhgfcaQ2bPIbM5XhdkMSUs4bMfyd_5cyL7Mo_c-amQ/viewform) (by 10/19)
