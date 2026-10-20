@@ -30,7 +30,7 @@ PennHealthX is bringing back our negotiating physician contracts event, a critic
 
 **👉 Register:** [here](https://docs.google.com/forms/d/e/1FAIpQLSexPO6nYhgfcaQ2bPIbM5XhdkMSUs4bMfyd_5cyL7Mo_c-amQ/viewform) (by 10/19)
 
-## Lunch Talk with Dr. Sanya Anand 💼
+## Being a Startup Physician Founder Lunch Talk 💼
 
 PennHealthX invites you to a lunch talk with **Dr. Sanya Anand**, a founding physician at SONATA. SONOTA is a healthcare startup that uses AI and in-depth testing to help doctors turn people’s scattered health data into actual preventive care.
 
