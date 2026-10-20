@@ -29,3 +29,15 @@ PennHealthX is bringing back our negotiating physician contracts event, a critic
 **📆 Date:** Monday, 10/26 @1-2pm
 
 **👉 Register:** [here](https://docs.google.com/forms/d/e/1FAIpQLSexPO6nYhgfcaQ2bPIbM5XhdkMSUs4bMfyd_5cyL7Mo_c-amQ/viewform) (by 10/19)
+
+## Lunch Talk with Dr. Sanya Anand 💼
+
+PennHealthX invites you to a lunch talk with **Dr. Sanya Anand**, a founding physician at SONATA. SONOTA is a healthcare startup that uses AI and in-depth testing to help doctors turn people’s scattered health data into actual preventive care.
+
+During this lunch talk, Dr. Anand will talk about the decision to go to industry after medical school, what physicians do for startups, and advice on how to seek opportunities outside of academic medicine. Kimchi House will be served!
+
+**📍 Location:** JMEC 516 EW
+
+**📆 Date:** Wednesday, 10/28 @1-2pm
+
+**👉 Register:** [here](https://docs.google.com/forms/d/e/1FAIpQLScVUWN9CXclpw6Yv1uedpEFRQ74ol7wECePsDHXVLXu4yrl2w/viewform)
