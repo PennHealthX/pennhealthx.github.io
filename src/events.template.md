@@ -20,23 +20,6 @@ Across 12 weekly sessions, you’ll learn about:
 
 Sessions are highly interactive and case-based, with students working in teams throughout the series to develop a healthcare innovation and ultimately pitch their idea to win prizes! Everyone can participate! No prior experience in entrepreneurship, business, or engineering is required. Dinner or snacks provided at every session. Whether you already have an idea for a medical innovation or are simply curious about entrepreneurship, this is an opportunity to learn from experts, explore the entrepreneurial process, and get hands-on experience developing a healthcare innovation.
 
-## FDA Pathways Lunch Talk 💊
-
-PennHealthX is excited to welcome **Dr. Katie Reuther, PhD, MBA**, Executive Director of Penn Health-Tech, for a session on navigating the FDA regulatory pathway. Throughout her career, she has worked at the intersection of medicine, engineering, and entrepreneurship, helping innovators translate new technologies into real-world clinical impact.
-
-We will cover:
-- What is the FDA's role in medical innovation?
-- How are medical devices, diagnostics, and digital health technologies regulated?
-- What are the major FDA regulatory pathways?
-- What challenges do innovators commonly encounter?
-- How does regulatory strategy influence commercialization and adoption?
-
-New Delhi will be served!
-
-**📍 Location:** JMEC 513
-
-**📆 Date:** Monday, 10/27 @12-1pm
-
 ## Being a Startup Physician Founder Lunch Talk 💼
 
 PennHealthX invites you to a lunch talk with **Dr. Sanya Anand**, a founding physician at SONATA. SONOTA is a healthcare startup that uses AI and in-depth testing to help doctors turn people’s scattered health data into actual preventive care.
