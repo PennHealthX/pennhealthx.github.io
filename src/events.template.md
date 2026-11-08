@@ -20,7 +20,7 @@ Across 12 weekly sessions, you’ll learn about:
 
 Sessions are highly interactive and case-based, with students working in teams throughout the series to develop a healthcare innovation and ultimately pitch their idea to win prizes! Everyone can participate! No prior experience in entrepreneurship, business, or engineering is required. Dinner or snacks provided at every session. Whether you already have an idea for a medical innovation or are simply curious about entrepreneurship, this is an opportunity to learn from experts, explore the entrepreneurial process, and get hands-on experience developing a healthcare innovation.
 
-## PennHealthX Fireside Chat on Funding, Clinical Validation, and Commercialization of Digital Health Innovations 📢
+## Fireside Chat on Funding, Clinical Validation, and Commercialization of Digital Health Innovations 📢
 
 We are excited to welcome Ayushi Sinha and Daniella Cohen, who will discuss how to secure funding, generate clinical evidence, and navigate the commercialization of healthcare technologies. As always, we will have plenty of snacks and treats!
 
