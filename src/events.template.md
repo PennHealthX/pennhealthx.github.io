@@ -29,4 +29,5 @@ We are excited to welcome Ayushi Sinha and Daniella Cohen, who will discuss how 
 **Daniella Cohen** is a principal at 2048 Ventures, leading the health practice. Prior to joining 2048 Ventures, she was a managing partner at Rough Draft Ventures, where she invested in student founders across the country. She holds a B.A. in Neuroscience from Princeton University.
 
 **📆 When: **Monday, November 9, 3:00-4:00 PM
+
 **📍 Location** JMEC 504
